@@ -9,3 +9,38 @@
 2023-08-27 15:26:49,613 django.utils.autoreload INFO     D:\Projects\django-microfinex\microfinex\urls.py changed, reloading.
 2023-08-27 15:26:51,578 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2023-08-27 15:27:05,418 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-27 15:27:50,753 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-27 15:28:13,147 django.request WARNING  Not Found: /
+2023-08-27 15:28:14,719 django.request WARNING  Not Found: /favicon.ico
+2023-08-27 15:30:41,731 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\common\models.py changed, reloading.
+2023-08-27 15:30:42,242 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\common\models.py changed, reloading.
+2023-08-27 15:30:45,076 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-27 15:30:45,189 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-27 15:33:13,703 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\profiles\models.py changed, reloading.
+2023-08-27 15:33:13,915 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\profiles\models.py changed, reloading.
+2023-08-27 15:33:16,409 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-27 15:33:16,412 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-27 15:37:31,698 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\profiles\models.py changed, reloading.
+2023-08-27 15:37:31,789 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\profiles\models.py changed, reloading.
+2023-08-27 15:37:33,748 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-27 15:37:33,845 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-27 15:38:26,226 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\profiles\models.py changed, reloading.
+2023-08-27 15:38:26,237 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\profiles\models.py changed, reloading.
+2023-08-27 15:38:28,016 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-27 15:38:28,100 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-27 15:38:34,799 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\profiles\models.py changed, reloading.
+2023-08-27 15:38:36,011 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\profiles\models.py changed, reloading.
+2023-08-27 15:38:36,705 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-27 15:38:37,987 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-27 15:46:04,360 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\profiles\models.py changed, reloading.
+2023-08-27 15:46:04,622 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\profiles\models.py changed, reloading.
+2023-08-27 15:46:08,074 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-27 15:46:08,074 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-27 15:50:48,646 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\profiles\admin.py changed, reloading.
+2023-08-27 15:50:48,647 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\profiles\admin.py changed, reloading.
+2023-08-27 15:50:51,043 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-27 15:50:52,685 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-27 15:51:29,392 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\profiles\apps.py changed, reloading.
+2023-08-27 15:51:29,875 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\profiles\apps.py changed, reloading.
+2023-08-27 15:51:32,767 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-27 15:51:33,387 django.utils.autoreload INFO     Watching for file changes with StatReloader
