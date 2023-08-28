@@ -11,4 +11,7 @@ psycopg2-binary
 flake8
 black
 isort
+djoser
+djangorestframework-simplejwt
+PyJWT
 

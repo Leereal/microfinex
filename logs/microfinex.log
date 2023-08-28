@@ -44,3 +44,62 @@
 2023-08-27 15:51:29,875 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\profiles\apps.py changed, reloading.
 2023-08-27 15:51:32,767 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2023-08-27 15:51:33,387 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-27 15:59:48,231 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-28 15:04:55,679 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-28 15:19:01,283 django.request ERROR    Internal Server Error: /api/v1/auth/users
+Traceback (most recent call last):
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/v1/auth/users/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-08-28 15:19:54,307 django.request WARNING  Bad Request: /api/v1/auth/users/
+2023-08-28 15:20:12,659 django.request ERROR    Internal Server Error: /api/v1/auth/users/
+Traceback (most recent call last):
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\djoser\views.py", line 140, in perform_create
+    settings.EMAIL.activation(self.request, context).send(to)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\templated_mail\mail.py", line 78, in send
+    super(BaseEmailMessage, self).send(*args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\core\mail\message.py", line 255, in get_connection
+    self.connection = get_connection(fail_silently=fail_silently)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\core\mail\__init__.py", line 50, in get_connection
+    klass = import_string(backend or settings.EMAIL_BACKEND)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\utils\module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\utils\module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+  File "C:\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'djcelery_email'
+2023-08-28 15:22:52,868 django.utils.autoreload INFO     D:\Projects\django-microfinex\microfinex\settings\development.py changed, reloading.

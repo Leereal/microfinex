@@ -1,4 +1,14 @@
 from .base import *
+from decouple import config
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = config("EMAIL_HOST")
+EMAIL_USE_TLS = True
+EMAIL_PORT = config("EMAIL_PORT")
+EMAIL_HOST_USER = config("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
+DEFAULT_FROM_EMAIL = "info@microfinex.com"
+DOMAIN = config("DOMAIN")
+SITE_NAME = "Microfinex"
 
 DATABASES = {
     'default': {
@@ -32,3 +42,7 @@ DATABASES = {
 #             "PORT": DB_PORT
 #         }
 #     }
+
+CELERY_BROKER_URL = config("CELERY_BROKER")
+CELERY_RESULT_BACKEND = config("CELERY_BACKEND")
+CELERY_TIMEZONE = "Africa/Kigali"
