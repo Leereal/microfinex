@@ -486,3 +486,19 @@ Traceback (most recent call last):
     return f"Loan for {self.client} - Amount: {self.loan_amount} {self.currency}"
 AttributeError: 'Loan' object has no attribute 'loan_amount'
 2023-08-31 14:47:26,875 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\loans\models.py changed, reloading.
+2023-08-31 14:47:29,416 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-31 14:56:10,135 django.utils.autoreload INFO     D:\Projects\django-microfinex\microfinex\urls.py changed, reloading.
+2023-08-31 14:56:17,329 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-31 15:08:11,703 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-31 15:08:16,126 django.request ERROR    Internal Server Error: /api/v1/enquiries
+Traceback (most recent call last):
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/v1/enquiries/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-08-31 15:08:38,891 django.utils.autoreload INFO     D:\Projects\django-microfinex\microfinex\urls.py changed, reloading.
