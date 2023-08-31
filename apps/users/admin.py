@@ -20,6 +20,7 @@ class UserAdmin(BaseUserAdmin):
         "last_name",
         "is_staff",
         "is_active",
+        "client_loans_list",
     ]
     list_display_links = ["id", "email"]
     list_filter = [
@@ -74,6 +75,9 @@ class UserAdmin(BaseUserAdmin):
         ),
     )
     search_fields = ["email", "username", "first_name", "last_name"]
+
+    def client_loans_list(self, obj):
+        return obj.client_loans.count()
 
 
 admin.site.register(User, UserAdmin)
