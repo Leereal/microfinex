@@ -192,3 +192,297 @@ Traceback (most recent call last):
     return f"Loan for {self.user} - Amount: {self.loan_amount} {self.currency_id}"
 AttributeError: 'Loan' object has no attribute 'user'
 2023-08-31 10:08:37,690 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\loans\models.py changed, reloading.
+2023-08-31 10:08:41,504 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-31 10:18:45,139 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\loans\models.py changed, reloading.
+2023-08-31 10:18:50,570 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-31 10:25:34,346 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\loans\admin.py changed, reloading.
+2023-08-31 10:25:42,486 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-31 10:40:01,878 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\loans\models.py changed, reloading.
+2023-08-31 10:40:07,624 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-31 10:40:27,820 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\loans\admin.py changed, reloading.
+2023-08-31 10:40:29,673 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-31 10:47:38,881 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\loan_products\models.py changed, reloading.
+2023-08-31 10:47:42,282 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-31 12:01:20,587 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-31 12:48:39,545 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\loans\urls.py changed, reloading.
+2023-08-31 12:48:49,501 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-31 12:50:00,818 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\loans\views.py changed, reloading.
+2023-08-31 12:50:04,781 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-31 12:53:55,726 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\loans\views.py changed, reloading.
+2023-08-31 12:53:59,684 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-31 12:54:02,756 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\loans\views.py changed, reloading.
+2023-08-31 12:54:04,367 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-31 12:54:09,138 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\loans\views.py changed, reloading.
+2023-08-31 12:54:11,168 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-31 12:55:09,265 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\loans\urls.py changed, reloading.
+2023-08-31 12:55:12,947 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-31 12:55:38,255 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\loans\urls.py changed, reloading.
+2023-08-31 12:55:40,318 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-31 12:55:49,055 django.request WARNING  Unauthorized: /api/v1/loans/
+2023-08-31 12:57:28,674 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create
+2023-08-31 12:57:44,885 django.request ERROR    Internal Server Error: /supersecret/loans/loan/1/change/
+Traceback (most recent call last):
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\options.py", line 1855, in _changeform_view
+    "subtitle": str(obj) if obj else None,
+  File "D:\Projects\django-microfinex\apps\loans\models.py", line 33, in __str__
+    return f"Loan for {self.client} - Amount: {self.loan_amount} {self.currency}"
+AttributeError: 'Loan' object has no attribute 'loan_amount'
+2023-08-31 12:57:48,448 django.request ERROR    Internal Server Error: /supersecret/loans/loan/1/change/
+Traceback (most recent call last):
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\options.py", line 1855, in _changeform_view
+    "subtitle": str(obj) if obj else None,
+  File "D:\Projects\django-microfinex\apps\loans\models.py", line 33, in __str__
+    return f"Loan for {self.client} - Amount: {self.loan_amount} {self.currency}"
+AttributeError: 'Loan' object has no attribute 'loan_amount'
+2023-08-31 12:57:53,291 django.request ERROR    Internal Server Error: /supersecret/loans/loan/1/change/
+Traceback (most recent call last):
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\options.py", line 1855, in _changeform_view
+    "subtitle": str(obj) if obj else None,
+  File "D:\Projects\django-microfinex\apps\loans\models.py", line 33, in __str__
+    return f"Loan for {self.client} - Amount: {self.loan_amount} {self.currency}"
+AttributeError: 'Loan' object has no attribute 'loan_amount'
+2023-08-31 13:56:55,351 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-31 14:04:04,580 django.request ERROR    Internal Server Error: /supersecret/clients/client/add/
+Traceback (most recent call last):
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: clients_client
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 1070, in render
+    return render_value_in_context(output, context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\template\base.py", line 1047, in render_value_in_context
+    value = str(value)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\utils\html.py", line 420, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\forms\boundfield.py", line 34, in __str__
+    return self.as_widget()
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\forms\boundfield.py", line 107, in as_widget
+    return widget.render(
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\forms\widgets.py", line 280, in render
+    context = self.get_context(name, value, attrs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\widgets.py", line 320, in get_context
+    "rendered_widget": self.widget.render(name, value, attrs),
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\forms\widgets.py", line 280, in render
+    context = self.get_context(name, value, attrs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\forms\widgets.py", line 758, in get_context
+    context = super().get_context(name, value, attrs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\forms\widgets.py", line 717, in get_context
+    context["widget"]["optgroups"] = self.optgroups(
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\forms\widgets.py", line 657, in optgroups
+    for index, (option_value, option_label) in enumerate(self.choices):
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\forms\models.py", line 1403, in __iter__
+    for obj in queryset:
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\db\models\query.py", line 516, in _iterator
+    yield from iterable
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: clients_client
+2023-08-31 14:40:44,312 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-31 14:43:48,938 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create
+2023-08-31 14:46:09,382 django.request ERROR    Internal Server Error: /supersecret/loans/loan/add/
+Traceback (most recent call last):
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\options.py", line 1886, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\options.py", line 1804, in _changeform_view
+    self.log_addition(request, new_object, change_message)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\contrib\admin\options.py", line 926, in log_addition
+    object_repr=str(obj),
+  File "D:\Projects\django-microfinex\apps\loans\models.py", line 33, in __str__
+    return f"Loan for {self.client} - Amount: {self.loan_amount} {self.currency}"
+AttributeError: 'Loan' object has no attribute 'loan_amount'
+2023-08-31 14:47:26,875 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\loans\models.py changed, reloading.

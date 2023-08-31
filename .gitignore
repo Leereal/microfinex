@@ -3,3 +3,4 @@
 staticfiles
 mediafiles
 __pycache__
+logs/microfinex.log

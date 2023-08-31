@@ -14,7 +14,7 @@ class Loan(TimeStampedUUIDModel):
     ref_code = models.CharField(max_length=20, unique=True, editable=False)  # Add this field
     client = models.ForeignKey(Client, on_delete=models.CASCADE, related_name='loans')    
     loan_product = models.ForeignKey(LoanProduct, on_delete=models.PROTECT)
-    loan_amount = models.DecimalField(max_digits=10, decimal_places=2)
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
     currency = models.ForeignKey(Currency, on_delete=models.PROTECT)  # Assuming you have a Currency model
     loan_term = models.PositiveIntegerField()
     application_date = models.DateField()
@@ -30,7 +30,7 @@ class Loan(TimeStampedUUIDModel):
     )
 
     def __str__(self):
-        return f"Loan for {self.client} - Amount: {self.loan_amount} {self.currency}"
+        return f"Loan for {self.client} - Amount: {self.amount} {self.currency}"
 
     class Meta:
         verbose_name = "Loan"
