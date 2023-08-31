@@ -119,3 +119,6 @@ RuntimeError: You called this URL via POST, but the URL doesn't end in a slash a
 2023-08-28 15:52:41,382 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create
 2023-08-29 16:05:24,585 django.utils.autoreload INFO     D:\Projects\django-microfinex\microfinex\urls.py changed, reloading.
 2023-08-29 16:05:29,690 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-29 16:10:31,197 django.request WARNING  Not Found: /api/v1/me
+2023-08-29 16:10:50,179 django.request WARNING  Not Found: /api/v1/priofile/me/
+2023-08-29 16:10:56,304 django.request WARNING  Not Found: /api/v1/priofile/me/
