@@ -45,6 +45,7 @@ class Profile(TimeStampedUUIDModel):
         blank=False,
         null=False,
     )
+    # Should remove this
     is_client = models.BooleanField(
         verbose_name=_("Client"),
         default=False,
