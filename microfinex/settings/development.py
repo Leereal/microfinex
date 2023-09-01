@@ -1,6 +1,7 @@
 from .base import *
 from decouple import config
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend" #Default for django
+EMAIL_BACKEND = "djcelery_email.backends.CeleryEmailBackend" # use when using celery
 EMAIL_HOST = config("EMAIL_HOST")
 EMAIL_USE_TLS = True
 EMAIL_PORT = config("EMAIL_PORT")
