@@ -25,3 +25,4 @@ django-celery-email
 argh
 PyYAML
 watchdog
+django-cors-headers

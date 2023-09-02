@@ -677,3 +677,92 @@ AttributeError: 'User' object has no attribute 'client_loans'
  'djcelery_email_send_multiple']
 2023-09-01 09:43:46,209 kombu.mixins INFO     Connected to redis://redis:6379/0
 2023-09-01 09:44:37,544 django.request WARNING  Bad Request: /api/v1/auth/users/
+2023-09-01 09:46:09,525 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-01 09:46:09,897 flower.command INFO     Visit me at http://localhost:5555
+2023-09-01 09:46:09,910 flower.command INFO     Broker: redis://redis:6379/0
+2023-09-01 09:46:09,913 flower.command INFO     Registered tasks: 
+['celery.accumulate',
+ 'celery.backend_cleanup',
+ 'celery.chain',
+ 'celery.chord',
+ 'celery.chord_unlock',
+ 'celery.chunks',
+ 'celery.group',
+ 'celery.map',
+ 'celery.starmap',
+ 'djcelery_email_send_multiple']
+2023-09-01 09:46:09,933 kombu.mixins INFO     Connected to redis://redis:6379/0
+2023-09-01 09:53:36,642 django.security.csrf WARNING  Forbidden (Origin checking failed - http://localhost:8080 does not match any trusted origins.): /supersecret/login/
+2023-09-01 13:33:01,051 flower.command INFO     Visit me at http://localhost:5555
+2023-09-01 13:33:01,062 flower.command INFO     Broker: redis://redis:6379/0
+2023-09-01 13:33:01,066 flower.command INFO     Registered tasks: 
+['celery.accumulate',
+ 'celery.backend_cleanup',
+ 'celery.chain',
+ 'celery.chord',
+ 'celery.chord_unlock',
+ 'celery.chunks',
+ 'celery.group',
+ 'celery.map',
+ 'celery.starmap',
+ 'djcelery_email_send_multiple']
+2023-09-01 13:33:01,065 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-01 13:33:01,091 kombu.mixins INFO     Connected to redis://redis:6379/0
+2023-09-01 14:07:25,719 flower.command INFO     Visit me at http://localhost:5555
+2023-09-01 14:07:25,798 flower.command INFO     Broker: redis://redis:6379/0
+2023-09-01 14:07:25,817 flower.command INFO     Registered tasks: 
+['celery.accumulate',
+ 'celery.backend_cleanup',
+ 'celery.chain',
+ 'celery.chord',
+ 'celery.chord_unlock',
+ 'celery.chunks',
+ 'celery.group',
+ 'celery.map',
+ 'celery.starmap',
+ 'djcelery_email_send_multiple']
+2023-09-01 14:07:25,921 kombu.mixins INFO     Connected to redis://redis:6379/0
+2023-09-01 14:07:30,754 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-01 14:20:19,987 flower.command INFO     Visit me at http://localhost:5555
+2023-09-01 14:20:20,086 flower.command INFO     Broker: redis://redis:6379/0
+2023-09-01 14:20:20,090 flower.command INFO     Registered tasks: 
+['celery.accumulate',
+ 'celery.backend_cleanup',
+ 'celery.chain',
+ 'celery.chord',
+ 'celery.chord_unlock',
+ 'celery.chunks',
+ 'celery.group',
+ 'celery.map',
+ 'celery.starmap',
+ 'djcelery_email_send_multiple']
+2023-09-01 14:20:20,136 kombu.mixins INFO     Connected to redis://redis:6379/0
+2023-09-01 14:20:21,330 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-02 14:43:10,456 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-02 14:43:52,875 django.utils.autoreload INFO     D:\Projects\django-microfinex\microfinex\settings\development.py changed, reloading.
+2023-09-02 14:43:53,958 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-02 14:46:41,108 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-02 14:50:10,444 django.request WARNING  Not Found: /api/v1/auth/jwt/create
+2023-09-02 14:50:39,617 django.request WARNING  Not Found: /api/v1/auth/jwt/create
+2023-09-02 14:51:48,128 django.utils.autoreload INFO     D:\Projects\django-microfinex\microfinex\urls.py changed, reloading.
+2023-09-02 14:51:49,092 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-02 14:51:51,853 django.request ERROR    Internal Server Error: /api/v1/auth/jwt/create
+Traceback (most recent call last):
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "D:\Projects\django-microfinex\.venv\lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/auth/jwt/create/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-09-02 14:52:25,980 django.utils.autoreload INFO     D:\Projects\django-microfinex\apps\users\urls.py changed, reloading.
+2023-09-02 14:52:27,044 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-02 14:52:30,372 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create
+2023-09-02 15:04:01,569 django.request WARNING  Bad Request: /api/v1/auth/users/
+2023-09-02 15:14:41,756 django.request WARNING  Unauthorized: /api/v1/auth/logout
+2023-09-02 15:15:21,298 django.utils.autoreload INFO     D:\Projects\django-microfinex\microfinex\settings\development.py changed, reloading.
+2023-09-02 15:15:23,642 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-02 15:16:38,998 django.utils.autoreload INFO     D:\Projects\django-microfinex\microfinex\settings\development.py changed, reloading.
+2023-09-02 15:16:39,961 django.utils.autoreload INFO     Watching for file changes with StatReloader
