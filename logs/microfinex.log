@@ -766,3 +766,159 @@ RuntimeError: You called this URL via POST, but the URL doesn't end in a slash a
 2023-09-02 15:15:23,642 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2023-09-02 15:16:38,998 django.utils.autoreload INFO     D:\Projects\django-microfinex\microfinex\settings\development.py changed, reloading.
 2023-09-02 15:16:39,961 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-10 02:04:06,829 flower.command INFO     Visit me at http://localhost:5555
+2023-09-10 02:04:07,012 flower.command INFO     Broker: redis://redis:6379/0
+2023-09-10 02:04:07,016 flower.command INFO     Registered tasks: 
+['celery.accumulate',
+ 'celery.backend_cleanup',
+ 'celery.chain',
+ 'celery.chord',
+ 'celery.chord_unlock',
+ 'celery.chunks',
+ 'celery.group',
+ 'celery.map',
+ 'celery.starmap',
+ 'djcelery_email_send_multiple']
+2023-09-10 02:04:07,038 kombu.mixins INFO     Connected to redis://redis:6379/0
+2023-09-10 02:04:07,102 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-10 02:05:55,030 django.request WARNING  Not Found: /api/v1/users/
+2023-09-10 02:42:14,974 django.request WARNING  Not Found: /api/v1/users
+2023-09-10 02:43:07,307 django.request ERROR    Internal Server Error: /api/v1/auth/users
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost/api/v1/auth/users/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-11-09 07:33:02,575 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-09 07:34:47,685 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\microfinex\settings\development.py changed, reloading.
+2023-11-09 07:34:48,615 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-09 07:37:18,439 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\microfinex\settings\development.py changed, reloading.
+2023-11-09 07:37:19,678 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-09 07:37:35,045 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\microfinex\settings\development.py changed, reloading.
+2023-11-09 07:37:37,480 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-09 07:41:26,532 django.request WARNING  Not Found: /
+2023-11-09 07:42:51,851 django.request WARNING  Not Found: /favicon.ico
+2023-11-09 07:43:43,609 django.request WARNING  Not Found: /api/v1/clients
+2023-11-09 07:48:05,315 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\microfinex\urls.py changed, reloading.
+2023-11-09 07:48:10,693 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-09 07:48:43,568 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\microfinex\urls.py changed, reloading.
+2023-11-09 07:48:45,346 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-09 08:25:04,437 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-09 08:25:09,737 django.request WARNING  Unauthorized: /api/v1/loans/
+2023-11-09 08:26:51,619 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create
+2023-11-09 08:28:16,064 django.request WARNING  Unauthorized: /api/v1/profile/me/
+2023-11-09 08:28:42,261 django.request WARNING  Unauthorized: /api/v1/profile/me/
+2023-11-09 08:28:44,771 django.request WARNING  Unauthorized: /api/v1/profile/me/
+2023-11-09 08:29:30,956 django.request WARNING  Unauthorized: /api/v1/loans/
+2023-11-09 12:20:24,586 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-09 12:47:34,101 django.request WARNING  Unauthorized: /api/v1/profile/me/
+2023-11-09 12:48:46,566 django.request WARNING  Not Found: /api/v1/clients
+2023-11-09 12:55:11,078 django.request WARNING  Not Found: /favicon.ico
+2023-11-09 12:55:19,847 django.request WARNING  Not Found: /
+2023-11-09 12:56:01,716 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\microfinex\urls.py changed, reloading.
+2023-11-09 12:56:08,396 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-09 12:56:12,190 django.request WARNING  Not Found: /
+2023-11-09 12:56:36,980 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\microfinex\urls.py changed, reloading.
+2023-11-09 12:56:38,231 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-09 12:57:08,966 django.request WARNING  Not Found: /api/v1/clients/
+2023-11-09 12:57:17,526 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\microfinex\urls.py changed, reloading.
+2023-11-09 12:57:18,527 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-09 12:57:28,912 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\microfinex\urls.py changed, reloading.
+2023-11-09 12:57:29,872 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-09 12:58:02,358 django.request WARNING  Not Found: /api/v1/clients/hdhd/kdkd
+2023-11-09 12:58:26,889 django.request WARNING  Unauthorized: /api/v1/clients
+2023-11-09 12:59:31,960 django.request WARNING  Unauthorized: /api/v1/clients
+2023-11-09 13:01:08,662 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\views.py changed, reloading.
+2023-11-09 13:01:11,713 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-09 13:01:33,097 django.request WARNING  Unauthorized: /api/v1/clients
+2023-11-09 13:02:00,367 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\urls.py changed, reloading.
+2023-11-09 13:02:01,462 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-09 13:02:01,996 django.request WARNING  Unauthorized: /api/v1/clients
+2023-11-09 13:02:05,099 django.request WARNING  Unauthorized: /api/v1/clients
+2023-11-09 13:02:06,926 django.request WARNING  Unauthorized: /api/v1/clients
+2023-11-09 13:02:38,726 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\urls.py changed, reloading.
+2023-11-09 13:02:39,555 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-09 13:03:03,050 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\views.py changed, reloading.
+2023-11-09 13:03:04,060 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-09 13:06:08,374 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\urls.py changed, reloading.
+2023-11-09 13:06:09,998 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-09 13:52:55,557 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\models.py changed, reloading.
+2023-11-09 13:53:14,084 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-09 13:54:30,763 django.request WARNING  Bad Request: /api/v1/clients
+2023-11-09 13:55:03,780 django.request ERROR    Internal Server Error: /api/v1/clients
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: table clients_client has no column named title
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: table clients_client has no column named title
+2023-11-09 14:11:17,999 django.request WARNING  Unauthorized: /api/v1/clients
+2023-11-09 15:26:24,395 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-09 15:28:18,805 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-09 15:30:54,373 django.request WARNING  Unauthorized: /api/v1/clients

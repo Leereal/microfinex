@@ -4,12 +4,20 @@ from apps.common.models import TimeStampedUUIDModel
 
 User = get_user_model()
 class Client(TimeStampedUUIDModel):
+    title = models.CharField(max_length=10)
     first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    date_of_birth = models.DateField()
-    address = models.TextField()
-    contact_number = models.CharField(max_length=20)
+    last_name = models.CharField(max_length=100)        
+    gender = models.CharField(max_length=10)
     email = models.EmailField(unique=True)
+    address = models.TextField()
+    city = models.CharField(max_length=100)
+    state = models.CharField(max_length=100)
+    zip_code = models.CharField(max_length=10)
+    country = models.CharField(max_length=100)
+    national_id = models.CharField(max_length=30)
+    passport_number = models.CharField(max_length=20)
+    passport_country = models.CharField(max_length=100)
+    date_of_birth = models.DateTimeField()
     guarantor = models.ForeignKey(
         "self", 
         on_delete=models.SET_NULL, 
