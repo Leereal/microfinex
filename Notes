@@ -1,0 +1,7 @@
+1. Command to see migrations : python manage.py sqlmigrate app_name 0001
+
+TODO
+
+1. learn about file upload to handle clients documents upload the right way
+   - learn how to upload them to S3 bucket
+   - research other best options for files

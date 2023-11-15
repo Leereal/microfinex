@@ -33,6 +33,8 @@ DJANGO_APPS = [
 
 SITE_ID = 1
 
+APPEND_SLASH=False 
+
 THIRD_PARTY_APPS = [
     'rest_framework',
     'django_filters',
@@ -44,7 +46,18 @@ THIRD_PARTY_APPS = [
     'corsheaders'
 ]
 
-LOCAL_APPS = [ "apps.common","apps.users","apps.profiles","apps.loans","apps.enquiries","apps.clients","apps.currencies","apps.loan_products"]
+LOCAL_APPS = [ 
+    "apps.common",
+    "apps.users",
+    "apps.profiles",
+    "apps.loans",
+    "apps.enquiries",
+    "apps.clients",
+    "apps.currencies",
+    "apps.loan_products",
+    "apps.branches",
+    "apps.posts"
+    ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -103,7 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = config('TIME_ZONE', default='UTC')
 
 USE_I18N = True
 
@@ -177,7 +190,7 @@ AUTH_COOKIE_SAMESITE = 'None'
 
 CORS_ALLOWED_ORIGINS = config(
     'CORS_ALLOWED_ORIGINS',
-    'http://localhost:3000,http://127.0.0.1:3000'
+    'http://localhost:3000,http://127.0.0.1:3000,http://localhost:3002,http://127.0.0.1:3002'
 ).split(',')
 CORS_ALLOW_CREDENTIALS = True
 
