@@ -4,13 +4,13 @@ from django.core.validators import MinValueValidator
 from django_countries.fields import CountryField
 
 from apps.clients.models import Client
-from apps.common.models import TimeStampedUUIDModel
+from apps.common.models import TimeStampedUUIDModel, TimeStampedUserModel
 from apps.loan_products.models import LoanProduct
 from apps.currencies.models import Currency
 
 User = get_user_model()
 
-class Loan(TimeStampedUUIDModel):
+class Loan(TimeStampedUserModel):
     ref_code = models.CharField(max_length=20, unique=True, editable=False)  # Add this field
     client = models.ForeignKey(Client, on_delete=models.CASCADE, related_name='loans')    
     loan_product = models.ForeignKey(LoanProduct, on_delete=models.PROTECT)
@@ -39,7 +39,7 @@ class Loan(TimeStampedUUIDModel):
     def save(self, *args, **kwargs):
         if not self.ref_code:
             # Generate a sequential ref_code based on the latest loan
-            last_loan = Loan.objects.order_by('-pkid').first()
+            last_loan = Loan.objects.order_by('-id').first()
             if last_loan:
                 last_ref_code = last_loan.ref_code
                 sequence = int(last_ref_code.split('-')[-1]) + 1
@@ -47,6 +47,18 @@ class Loan(TimeStampedUUIDModel):
                 sequence = 1
             self.ref_code = f"LN-{sequence:08d}"
         super().save(*args, **kwargs)
+
+class LoanCollateral(TimeStampedUserModel):
+    loan = models.ForeignKey(Loan, on_delete=models.CASCADE, related_name='collaterals')
+    type = models.CharField(max_length=255)
+    value = models.DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return f"Collateral for Loan {self.loan} - Type: {self.type}, Value: {self.value}"
+
+    class Meta:
+        verbose_name = "Loan Collateral"
+        verbose_name_plural = "Loan Collaterals"
 
 
 

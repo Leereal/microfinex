@@ -29,13 +29,14 @@ class TimeStampedUserModel(models.Model):
 
     class Meta:
         abstract = True
+        ordering = ["-created_at"]#You can overide this in the child class
 
 
-@receiver(pre_save, sender=TimeStampedUserModel)
-def set_created_by(sender, instance, **kwargs):
-    from django.apps import apps
-    UserModel = get_user_model()
-    request = apps.get_model("django.contrib", "auth.models").get_current_request()
+# @receiver(pre_save, sender=TimeStampedUserModel)
+# def set_created_by(sender, instance, **kwargs):
+    # from django.apps import apps
+    # UserModel = get_user_model()
+    # request = apps.get_model("django.contrib", "auth.models").get_current_request()
 
-    if request and request.user.is_authenticated:
-        instance.created_by = request.user
+    # if request and request.user.is_authenticated:
+    #     instance.created_by = request.user

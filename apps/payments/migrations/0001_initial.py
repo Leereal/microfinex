@@ -10,7 +10,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name="Branch",
+            name="Payment",
             fields=[
                 (
                     "id",
@@ -21,14 +21,19 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("name", models.CharField(max_length=100)),
-                ("address", models.CharField(max_length=200)),
-                ("phone", models.CharField(max_length=20)),
-                ("email", models.EmailField(max_length=254)),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("updated_at", models.DateTimeField(auto_now=True)),
+                ("date", models.DateField()),
+                ("amount", models.DecimalField(decimal_places=2, max_digits=10)),
+                (
+                    "receipt_number",
+                    models.CharField(blank=True, max_length=50, null=True),
+                ),
+                ("notes", models.TextField(blank=True, null=True)),
             ],
             options={
-                "verbose_name": "Branch",
-                "verbose_name_plural": "Branches",
+                "verbose_name": "Payment",
+                "verbose_name_plural": "Payments",
             },
         ),
     ]

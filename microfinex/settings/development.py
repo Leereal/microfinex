@@ -11,12 +11,24 @@ DEFAULT_FROM_EMAIL = "info@microfinex.com"
 DOMAIN = config("DOMAIN")
 SITE_NAME = config("SITE_NAME")
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'mutabvuri$8',
+        'HOST': 'db.oegsjgybflckvgugkmpn.supabase.co',
+        'PORT': '5432',
     }
 }
+
 
 # DB_USERNAME = config("POSTGRES_USER")
 # DB_PASSWORD = config("POSTGRES_PASSWORD")

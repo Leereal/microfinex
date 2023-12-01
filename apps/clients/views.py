@@ -1,12 +1,24 @@
 from rest_framework import viewsets
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, BasePermission
 from rest_framework.response import Response
 from rest_framework.status import HTTP_200_OK, HTTP_201_CREATED
 
 from .models import Client, Phone
 from .serializers import ClientSerializer, PhoneSerializer
 
-class ClientViewSet(viewsets.ModelViewSet):
+class ClientUserPermission(BasePermission):
+    """
+    Custom permission to only allow owners of an object to edit it.
+    """
+    def has_object_permission(self, request, view, obj):
+        # Read permissions are allowed to any request,
+        # so we'll always allow GET, HEAD or OPTIONS requests.        
+        if request.method in ['GET', 'HEAD', 'OPTIONS']:
+            return True
+        # Write permissions are only allowed to the owner of the snippet.
+        return obj.created_by == request.user
+
+class ClientViewSet(viewsets.ModelViewSet, ClientUserPermission):
     """
     API endpoint for CRUD operations on social media platforms.
     """
@@ -18,14 +30,13 @@ class ClientViewSet(viewsets.ModelViewSet):
         # Overriding the create method to handle comments
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        self.perform_create(serializer)
+        serializer.save(created_by=self.request.user)
         return Response(serializer.data)
 
     
     #To override the list method of the viewset
     def list(self, request):
         queryset = self.queryset
-        print(queryset)
         return Response(self.serializer_class(queryset,many=True).data, status=HTTP_200_OK)
         #the queryset is filtered by the search query
         # search = request.GET.get('search') # use query like this : api/clients/?search=John

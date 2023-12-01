@@ -33,7 +33,7 @@ DJANGO_APPS = [
 
 SITE_ID = 1
 
-APPEND_SLASH=False 
+APPEND_SLASH = False 
 
 THIRD_PARTY_APPS = [
     'rest_framework',
@@ -43,7 +43,8 @@ THIRD_PARTY_APPS = [
     'djoser',
     'rest_framework_simplejwt',
     'djcelery_email',
-    'corsheaders'
+    'corsheaders',
+    'easyaudit'
 ]
 
 LOCAL_APPS = [ 
@@ -56,12 +57,16 @@ LOCAL_APPS = [
     "apps.currencies",
     "apps.loan_products",
     "apps.branches",
-    "apps.posts"
+    "apps.posts",
+    "apps.payments",
+    "apps.payment_methods",
+    "apps.notes",
     ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
+    'easyaudit.middleware.easyaudit.EasyAuditMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
@@ -69,7 +74,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',    
 ]
 
 ROOT_URLCONF = 'microfinex.urls'
@@ -237,3 +242,7 @@ logging.config.dictConfig({
         "django.server": DEFAULT_LOGGING["loggers"]["django.server"],
     }
 })
+
+DJANGO_EASY_AUDIT_WATCH_AUTH_EVENTS=False
+DJANGO_EASY_AUDIT_WATCH_REQUEST_EVENTS=False
+DJANGO_EASY_AUDIT_WATCH_AUTH_EVENTS=False

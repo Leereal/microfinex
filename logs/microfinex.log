@@ -2365,3 +2365,1940 @@ Traceback (most recent call last):
 ValueError: save() prohibited to prevent data loss due to unsaved related object 'client'.
 2023-11-15 19:50:12,250 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\models.py changed, reloading.
 2023-11-15 19:50:13,307 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 20:18:06,325 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\models.py changed, reloading.
+2023-11-15 20:18:07,296 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 20:18:22,412 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\models.py changed, reloading.
+2023-11-15 20:18:23,290 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 20:19:26,883 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\serializers.py changed, reloading.
+2023-11-15 20:19:27,705 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 20:20:47,576 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\models.py changed, reloading.
+2023-11-15 20:20:48,480 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 20:20:54,968 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\models.py changed, reloading.
+2023-11-15 20:20:55,824 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 20:23:19,467 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\serializers.py changed, reloading.
+2023-11-15 20:23:20,536 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 20:24:07,498 django.request WARNING  Not Found: /favicon.ico
+2023-11-15 20:47:07,398 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\views.py changed, reloading.
+2023-11-15 20:47:08,771 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 20:48:20,376 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\views.py changed, reloading.
+2023-11-15 20:48:21,271 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 20:52:37,008 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\serializers.py changed, reloading.
+2023-11-15 20:52:38,535 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 20:53:28,571 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\views.py changed, reloading.
+2023-11-15 20:53:29,370 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 20:54:00,908 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\views.py changed, reloading.
+2023-11-15 20:54:01,758 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 20:57:22,069 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\views.py changed, reloading.
+2023-11-15 20:57:23,081 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 21:02:49,517 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\views.py changed, reloading.
+2023-11-15 21:02:50,542 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 21:04:33,026 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\serializers.py changed, reloading.
+2023-11-15 21:04:33,945 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 21:05:56,905 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\models.py changed, reloading.
+2023-11-15 21:05:57,771 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 21:06:30,504 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\serializers.py changed, reloading.
+2023-11-15 21:06:31,296 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 21:08:09,572 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\serializers.py changed, reloading.
+2023-11-15 21:08:10,538 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 21:12:23,519 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\views.py changed, reloading.
+2023-11-15 21:12:24,474 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 21:12:39,782 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\views.py changed, reloading.
+2023-11-15 21:12:40,703 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 21:13:55,235 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\views.py changed, reloading.
+2023-11-15 21:13:56,218 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 21:14:37,899 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\views.py changed, reloading.
+2023-11-15 21:14:38,906 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 21:16:15,207 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\models.py changed, reloading.
+2023-11-15 21:16:16,181 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 21:16:43,347 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\serializers.py changed, reloading.
+2023-11-15 21:16:44,341 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 21:16:51,780 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\serializers.py changed, reloading.
+2023-11-15 21:16:52,636 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-15 21:17:01,262 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\views.py changed, reloading.
+2023-11-15 21:17:02,149 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 10:52:05,187 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 11:25:21,221 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 11:43:07,615 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 11:47:13,660 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 11:48:04,761 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\microfinex\settings\base.py changed, reloading.
+2023-11-16 11:48:05,790 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 11:49:34,015 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 11:49:45,274 django.request WARNING  Not Found: /favicon.ico
+2023-11-16 12:15:22,565 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\microfinex\settings\base.py changed, reloading.
+2023-11-16 12:15:26,654 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 12:16:48,044 easyaudit.signals.model_signals ERROR    easy audit had a pre_save exception on CRUDEvent creation. instance: Leereal, instance pk: 1
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 114, in debug_sql
+    yield
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 112, in crud_flow
+    crud_event = audit_logger.crud({
+                 ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\backends.py", line 13, in crud
+    return CRUDEvent.objects.create(**crud_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 101, in execute
+    with self.debug_sql(sql, params, use_last_executed_query=True):
+  File "C:\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 119, in debug_sql
+    sql = self.db.ops.last_executed_query(self.cursor, sql, params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 176, in last_executed_query
+    params = self._quote_params_for_last_executed_query(params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 165, in _quote_params_for_last_executed_query
+    return cursor.execute(sql, params).fetchone()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+2023-11-16 12:16:48,131 easyaudit.signals.model_signals ERROR    easy audit had a pre-save exception.
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 114, in debug_sql
+    yield
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 77, in pre_save
+    with transaction.atomic(using=using):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\transaction.py", line 307, in __exit__
+    connection.set_autocommit(True)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\base\base.py", line 501, in set_autocommit
+    self.run_and_clear_commit_hooks()
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\base\base.py", line 779, in run_and_clear_commit_hooks
+    func()
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 131, in crud_flow
+    raise e
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 112, in crud_flow
+    crud_event = audit_logger.crud({
+                 ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\backends.py", line 13, in crud
+    return CRUDEvent.objects.create(**crud_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 101, in execute
+    with self.debug_sql(sql, params, use_last_executed_query=True):
+  File "C:\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 119, in debug_sql
+    sql = self.db.ops.last_executed_query(self.cursor, sql, params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 176, in last_executed_query
+    params = self._quote_params_for_last_executed_query(params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 165, in _quote_params_for_last_executed_query
+    return cursor.execute(sql, params).fetchone()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+2023-11-16 12:16:48,288 easyaudit.signals.model_signals ERROR    easy audit had a pre_save exception on CRUDEvent creation. instance: Leereal's profile, instance pk: 1
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 114, in debug_sql
+    yield
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 112, in crud_flow
+    crud_event = audit_logger.crud({
+                 ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\backends.py", line 13, in crud
+    return CRUDEvent.objects.create(**crud_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 101, in execute
+    with self.debug_sql(sql, params, use_last_executed_query=True):
+  File "C:\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 119, in debug_sql
+    sql = self.db.ops.last_executed_query(self.cursor, sql, params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 176, in last_executed_query
+    params = self._quote_params_for_last_executed_query(params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 165, in _quote_params_for_last_executed_query
+    return cursor.execute(sql, params).fetchone()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+2023-11-16 12:16:48,308 easyaudit.signals.model_signals ERROR    easy audit had a pre-save exception.
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 114, in debug_sql
+    yield
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 77, in pre_save
+    with transaction.atomic(using=using):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\transaction.py", line 307, in __exit__
+    connection.set_autocommit(True)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\base\base.py", line 501, in set_autocommit
+    self.run_and_clear_commit_hooks()
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\base\base.py", line 779, in run_and_clear_commit_hooks
+    func()
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 131, in crud_flow
+    raise e
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 112, in crud_flow
+    crud_event = audit_logger.crud({
+                 ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\backends.py", line 13, in crud
+    return CRUDEvent.objects.create(**crud_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 101, in execute
+    with self.debug_sql(sql, params, use_last_executed_query=True):
+  File "C:\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 119, in debug_sql
+    sql = self.db.ops.last_executed_query(self.cursor, sql, params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 176, in last_executed_query
+    params = self._quote_params_for_last_executed_query(params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 165, in _quote_params_for_last_executed_query
+    return cursor.execute(sql, params).fetchone()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+2023-11-16 12:23:13,427 easyaudit.signals.model_signals ERROR    easy audit had a post_save exception on CRUDEvent creation. instance: Test Mutabvuri, instance pk: 34
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 114, in debug_sql
+    yield
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 178, in crud_flow
+    crud_event = audit_logger.crud({
+                 ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\backends.py", line 13, in crud
+    return CRUDEvent.objects.create(**crud_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 101, in execute
+    with self.debug_sql(sql, params, use_last_executed_query=True):
+  File "C:\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 119, in debug_sql
+    sql = self.db.ops.last_executed_query(self.cursor, sql, params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 176, in last_executed_query
+    params = self._quote_params_for_last_executed_query(params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 165, in _quote_params_for_last_executed_query
+    return cursor.execute(sql, params).fetchone()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+2023-11-16 12:23:13,457 easyaudit.signals.model_signals ERROR    easy audit had a post-save exception.
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 114, in debug_sql
+    yield
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 154, in post_save
+    with transaction.atomic(using=using):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\transaction.py", line 307, in __exit__
+    connection.set_autocommit(True)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\base\base.py", line 501, in set_autocommit
+    self.run_and_clear_commit_hooks()
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\base\base.py", line 779, in run_and_clear_commit_hooks
+    func()
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 196, in crud_flow
+    raise e
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 178, in crud_flow
+    crud_event = audit_logger.crud({
+                 ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\backends.py", line 13, in crud
+    return CRUDEvent.objects.create(**crud_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 101, in execute
+    with self.debug_sql(sql, params, use_last_executed_query=True):
+  File "C:\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 119, in debug_sql
+    sql = self.db.ops.last_executed_query(self.cursor, sql, params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 176, in last_executed_query
+    params = self._quote_params_for_last_executed_query(params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 165, in _quote_params_for_last_executed_query
+    return cursor.execute(sql, params).fetchone()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+2023-11-16 12:23:13,552 easyaudit.signals.model_signals ERROR    easy audit had a post_save exception on CRUDEvent creation. instance: Home Phone - 5656565656, instance pk: 26
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 114, in debug_sql
+    yield
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 178, in crud_flow
+    crud_event = audit_logger.crud({
+                 ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\backends.py", line 13, in crud
+    return CRUDEvent.objects.create(**crud_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 101, in execute
+    with self.debug_sql(sql, params, use_last_executed_query=True):
+  File "C:\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 119, in debug_sql
+    sql = self.db.ops.last_executed_query(self.cursor, sql, params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 176, in last_executed_query
+    params = self._quote_params_for_last_executed_query(params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 165, in _quote_params_for_last_executed_query
+    return cursor.execute(sql, params).fetchone()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+2023-11-16 12:23:13,569 easyaudit.signals.model_signals ERROR    easy audit had a post-save exception.
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 114, in debug_sql
+    yield
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 154, in post_save
+    with transaction.atomic(using=using):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\transaction.py", line 307, in __exit__
+    connection.set_autocommit(True)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\base\base.py", line 501, in set_autocommit
+    self.run_and_clear_commit_hooks()
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\base\base.py", line 779, in run_and_clear_commit_hooks
+    func()
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 196, in crud_flow
+    raise e
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 178, in crud_flow
+    crud_event = audit_logger.crud({
+                 ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\backends.py", line 13, in crud
+    return CRUDEvent.objects.create(**crud_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 101, in execute
+    with self.debug_sql(sql, params, use_last_executed_query=True):
+  File "C:\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 119, in debug_sql
+    sql = self.db.ops.last_executed_query(self.cursor, sql, params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 176, in last_executed_query
+    params = self._quote_params_for_last_executed_query(params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 165, in _quote_params_for_last_executed_query
+    return cursor.execute(sql, params).fetchone()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+2023-11-16 12:23:13,629 easyaudit.signals.model_signals ERROR    easy audit had a post_save exception on CRUDEvent creation. instance: Cellphone Phone - 65656565656, instance pk: 27
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 114, in debug_sql
+    yield
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 178, in crud_flow
+    crud_event = audit_logger.crud({
+                 ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\backends.py", line 13, in crud
+    return CRUDEvent.objects.create(**crud_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 101, in execute
+    with self.debug_sql(sql, params, use_last_executed_query=True):
+  File "C:\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 119, in debug_sql
+    sql = self.db.ops.last_executed_query(self.cursor, sql, params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 176, in last_executed_query
+    params = self._quote_params_for_last_executed_query(params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 165, in _quote_params_for_last_executed_query
+    return cursor.execute(sql, params).fetchone()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+2023-11-16 12:23:13,653 easyaudit.signals.model_signals ERROR    easy audit had a post-save exception.
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 114, in debug_sql
+    yield
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 154, in post_save
+    with transaction.atomic(using=using):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\transaction.py", line 307, in __exit__
+    connection.set_autocommit(True)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\base\base.py", line 501, in set_autocommit
+    self.run_and_clear_commit_hooks()
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\base\base.py", line 779, in run_and_clear_commit_hooks
+    func()
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 196, in crud_flow
+    raise e
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 178, in crud_flow
+    crud_event = audit_logger.crud({
+                 ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\backends.py", line 13, in crud
+    return CRUDEvent.objects.create(**crud_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 101, in execute
+    with self.debug_sql(sql, params, use_last_executed_query=True):
+  File "C:\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 119, in debug_sql
+    sql = self.db.ops.last_executed_query(self.cursor, sql, params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 176, in last_executed_query
+    params = self._quote_params_for_last_executed_query(params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 165, in _quote_params_for_last_executed_query
+    return cursor.execute(sql, params).fetchone()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+2023-11-16 12:30:29,383 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\microfinex\settings\base.py changed, reloading.
+2023-11-16 12:30:33,145 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 12:31:48,378 easyaudit.signals.model_signals ERROR    easy audit had a post_delete exception on CRUDEvent creation. instance: Cellphone Phone - 65656565656, instance pk: 9
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 114, in debug_sql
+    yield
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 334, in crud_flow
+    crud_event = audit_logger.crud({
+                 ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\backends.py", line 13, in crud
+    return CRUDEvent.objects.create(**crud_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 101, in execute
+    with self.debug_sql(sql, params, use_last_executed_query=True):
+  File "C:\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 119, in debug_sql
+    sql = self.db.ops.last_executed_query(self.cursor, sql, params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 176, in last_executed_query
+    params = self._quote_params_for_last_executed_query(params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 165, in _quote_params_for_last_executed_query
+    return cursor.execute(sql, params).fetchone()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+2023-11-16 12:31:48,797 django.request ERROR    Internal Server Error: /supersecret/clients/client/
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 114, in debug_sql
+    yield
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\options.py", line 1983, in changelist_view
+    response = self.response_action(
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\actions.py", line 51, in delete_selected
+    modeladmin.delete_queryset(request, queryset)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\options.py", line 1237, in delete_queryset
+    queryset.delete()
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1148, in delete
+    deleted, _rows_count = collector.delete()
+                           ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\deletion.py", line 459, in delete
+    with transaction.atomic(using=self.using, savepoint=False):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\transaction.py", line 307, in __exit__
+    connection.set_autocommit(True)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\base\base.py", line 501, in set_autocommit
+    self.run_and_clear_commit_hooks()
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\base\base.py", line 779, in run_and_clear_commit_hooks
+    func()
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 353, in crud_flow
+    raise e
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 334, in crud_flow
+    crud_event = audit_logger.crud({
+                 ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\backends.py", line 13, in crud
+    return CRUDEvent.objects.create(**crud_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 101, in execute
+    with self.debug_sql(sql, params, use_last_executed_query=True):
+  File "C:\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 119, in debug_sql
+    sql = self.db.ops.last_executed_query(self.cursor, sql, params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 176, in last_executed_query
+    params = self._quote_params_for_last_executed_query(params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 165, in _quote_params_for_last_executed_query
+    return cursor.execute(sql, params).fetchone()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+2023-11-16 13:04:46,993 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 13:05:19,800 easyaudit.signals.model_signals ERROR    easy audit had a pre_save exception on CRUDEvent creation. instance: Test Mutab, instance pk: 30
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 114, in debug_sql
+    yield
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 112, in crud_flow
+    crud_event = audit_logger.crud({
+                 ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\backends.py", line 13, in crud
+    return CRUDEvent.objects.create(**crud_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 101, in execute
+    with self.debug_sql(sql, params, use_last_executed_query=True):
+  File "C:\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 119, in debug_sql
+    sql = self.db.ops.last_executed_query(self.cursor, sql, params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 176, in last_executed_query
+    params = self._quote_params_for_last_executed_query(params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 165, in _quote_params_for_last_executed_query
+    return cursor.execute(sql, params).fetchone()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+2023-11-16 13:05:20,126 django.request ERROR    Internal Server Error: /supersecret/clients/client/30/change/
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 114, in debug_sql
+    yield
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\options.py", line 1746, in changeform_view
+    with transaction.atomic(using=router.db_for_write(self.model)):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\transaction.py", line 307, in __exit__
+    connection.set_autocommit(True)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\base\base.py", line 501, in set_autocommit
+    self.run_and_clear_commit_hooks()
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\base\base.py", line 779, in run_and_clear_commit_hooks
+    func()
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 131, in crud_flow
+    raise e
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 112, in crud_flow
+    crud_event = audit_logger.crud({
+                 ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\backends.py", line 13, in crud
+    return CRUDEvent.objects.create(**crud_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 101, in execute
+    with self.debug_sql(sql, params, use_last_executed_query=True):
+  File "C:\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 119, in debug_sql
+    sql = self.db.ops.last_executed_query(self.cursor, sql, params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 176, in last_executed_query
+    params = self._quote_params_for_last_executed_query(params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\sqlite3\operations.py", line 165, in _quote_params_for_last_executed_query
+    return cursor.execute(sql, params).fetchone()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+2023-11-16 13:07:52,553 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\microfinex\settings\development.py changed, reloading.
+2023-11-16 13:07:56,287 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 13:09:07,599 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 13:39:01,126 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 13:44:38,897 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\microfinex\settings\development.py changed, reloading.
+2023-11-16 13:44:49,639 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 13:51:55,805 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 13:52:03,720 django.request WARNING  Not Found: /favicon.ico
+2023-11-16 13:52:12,006 easyaudit.signals.model_signals ERROR    easy audit had a pre_save exception on CRUDEvent creation. instance: Leereal, instance pk: 1
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NumericValueOutOfRange: bigint out of range
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 112, in crud_flow
+    crud_event = audit_logger.crud({
+                 ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\backends.py", line 13, in crud
+    return CRUDEvent.objects.create(**crud_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.DataError: bigint out of range
+
+2023-11-16 13:52:12,077 easyaudit.signals.model_signals ERROR    easy audit had a pre-save exception.
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NumericValueOutOfRange: bigint out of range
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 77, in pre_save
+    with transaction.atomic(using=using):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\transaction.py", line 307, in __exit__
+    connection.set_autocommit(True)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\base\base.py", line 501, in set_autocommit
+    self.run_and_clear_commit_hooks()
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\base\base.py", line 779, in run_and_clear_commit_hooks
+    func()
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 131, in crud_flow
+    raise e
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 112, in crud_flow
+    crud_event = audit_logger.crud({
+                 ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\backends.py", line 13, in crud
+    return CRUDEvent.objects.create(**crud_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.DataError: bigint out of range
+
+2023-11-16 13:52:17,019 easyaudit.signals.model_signals ERROR    easy audit had a pre_save exception on CRUDEvent creation. instance: Leereal's profile, instance pk: 1
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NumericValueOutOfRange: bigint out of range
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 112, in crud_flow
+    crud_event = audit_logger.crud({
+                 ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\backends.py", line 13, in crud
+    return CRUDEvent.objects.create(**crud_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.DataError: bigint out of range
+
+2023-11-16 13:52:17,038 easyaudit.signals.model_signals ERROR    easy audit had a pre-save exception.
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NumericValueOutOfRange: bigint out of range
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 77, in pre_save
+    with transaction.atomic(using=using):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\transaction.py", line 307, in __exit__
+    connection.set_autocommit(True)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\base\base.py", line 501, in set_autocommit
+    self.run_and_clear_commit_hooks()
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\base\base.py", line 779, in run_and_clear_commit_hooks
+    func()
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 131, in crud_flow
+    raise e
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\signals\model_signals.py", line 112, in crud_flow
+    crud_event = audit_logger.crud({
+                 ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\backends.py", line 13, in crud
+    return CRUDEvent.objects.create(**crud_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.DataError: bigint out of range
+
+2023-11-16 14:01:33,097 django.request ERROR    Internal Server Error: /supersecret/easyaudit/crudevent/
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2688, in to_python
+    return uuid.UUID(**{input_form: value})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\uuid.py", line 178, in __init__
+    raise ValueError('badly formed hexadecimal UUID string')
+ValueError: badly formed hexadecimal UUID string
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\options.py", line 1926, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\admin.py", line 57, in get_changelist_instance
+    changelist_instance = super().get_changelist_instance(*args, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\admin_helpers.py", line 39, in get_changelist_instance
+    self.users_by_id = {user.id: user for user in get_user_model().objects.filter(id__in=user_ids)}
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1318, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\lookups.py", line 426, in get_prep_lookup
+    return super().get_prep_lookup()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\lookups.py", line 276, in get_prep_lookup
+    rhs_value = self.lhs.output_field.get_prep_value(rhs_value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2672, in get_prep_value
+    return self.to_python(value)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2690, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“212357073739780750446834954849885802622” is not a valid UUID.']
+2023-11-16 14:07:49,430 django.request ERROR    Internal Server Error: /supersecret/easyaudit/crudevent/
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2688, in to_python
+    return uuid.UUID(**{input_form: value})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\uuid.py", line 175, in __init__
+    hex = hex.replace('urn:', '').replace('uuid:', '')
+          ^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'replace'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\options.py", line 1926, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\admin.py", line 57, in get_changelist_instance
+    changelist_instance = super().get_changelist_instance(*args, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\admin_helpers.py", line 39, in get_changelist_instance
+    self.users_by_id = {user.id: user for user in get_user_model().objects.filter(id__in=user_ids)}
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1318, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\lookups.py", line 426, in get_prep_lookup
+    return super().get_prep_lookup()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\lookups.py", line 276, in get_prep_lookup
+    rhs_value = self.lhs.output_field.get_prep_value(rhs_value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2672, in get_prep_value
+    return self.to_python(value)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2690, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“2.12357073739781e+38” is not a valid UUID.']
+2023-11-16 14:09:40,215 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\fields\__init__.py changed, reloading.
+2023-11-16 14:09:43,956 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 14:09:52,407 django.request ERROR    Internal Server Error: /supersecret/easyaudit/crudevent/
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2689, in to_python
+    return uuid.UUID(**{input_form: value})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\uuid.py", line 175, in __init__
+    hex = hex.replace('urn:', '').replace('uuid:', '')
+          ^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'replace'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\options.py", line 1926, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\admin.py", line 57, in get_changelist_instance
+    changelist_instance = super().get_changelist_instance(*args, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\admin_helpers.py", line 39, in get_changelist_instance
+    self.users_by_id = {user.id: user for user in get_user_model().objects.filter(id__in=user_ids)}
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1318, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\lookups.py", line 426, in get_prep_lookup
+    return super().get_prep_lookup()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\lookups.py", line 276, in get_prep_lookup
+    rhs_value = self.lhs.output_field.get_prep_value(rhs_value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2672, in get_prep_value
+    return self.to_python(value)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2691, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“2.12357073739781e+38” is not a valid UUID.']
+2023-11-16 14:09:57,233 django.request ERROR    Internal Server Error: /supersecret/easyaudit/crudevent/
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2689, in to_python
+    return uuid.UUID(**{input_form: value})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\uuid.py", line 175, in __init__
+    hex = hex.replace('urn:', '').replace('uuid:', '')
+          ^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'replace'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\options.py", line 1926, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\admin.py", line 57, in get_changelist_instance
+    changelist_instance = super().get_changelist_instance(*args, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\easyaudit\admin_helpers.py", line 39, in get_changelist_instance
+    self.users_by_id = {user.id: user for user in get_user_model().objects.filter(id__in=user_ids)}
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1318, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\lookups.py", line 426, in get_prep_lookup
+    return super().get_prep_lookup()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\lookups.py", line 276, in get_prep_lookup
+    rhs_value = self.lhs.output_field.get_prep_value(rhs_value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2672, in get_prep_value
+    return self.to_python(value)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2691, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“2.12357073739781e+38” is not a valid UUID.']
+2023-11-16 14:12:17,509 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\fields\__init__.py changed, reloading.
+2023-11-16 14:12:18,561 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 14:12:34,275 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\microfinex\settings\base.py changed, reloading.
+2023-11-16 14:12:35,271 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 14:12:38,709 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\microfinex\settings\base.py changed, reloading.
+2023-11-16 14:12:39,682 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 14:27:10,302 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\common\models.py changed, reloading.
+2023-11-16 14:27:14,407 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 14:28:03,414 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\models.py changed, reloading.
+2023-11-16 14:28:04,373 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 14:29:12,150 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 14:30:45,560 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\common\models.py changed, reloading.
+2023-11-16 14:30:46,765 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-16 14:31:11,240 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\models.py changed, reloading.
+2023-11-16 14:31:12,226 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-17 08:00:27,491 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-17 08:06:10,890 django.request WARNING  Not Found: /api/v1/clients
+2023-11-17 08:10:15,941 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\microfinex\settings\base.py changed, reloading.
+2023-11-17 08:11:14,594 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-17 08:14:14,309 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\urls.py changed, reloading.
+2023-11-17 08:14:16,018 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-17 08:16:05,633 django.request WARNING  Not Found: /api/v1/clients/
+2023-11-17 08:16:46,884 django.request WARNING  Unauthorized: /api/v1/clients
+2023-11-17 08:16:47,631 django.request WARNING  Not Found: /favicon.ico
+2023-11-20 15:09:33,033 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 07:40:54,774 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 07:56:45,149 django.request WARNING  Bad Request: /api/v1/clients
+2023-11-21 14:23:54,838 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 14:28:57,941 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\branches\views.py changed, reloading.
+2023-11-21 14:28:59,386 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 14:29:33,410 django.request WARNING  Not Found: /favicon.ico
+2023-11-21 14:32:14,109 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\branches\admin.py changed, reloading.
+2023-11-21 14:32:15,492 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 14:34:05,898 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\branches\models.py changed, reloading.
+2023-11-21 14:34:07,004 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 14:34:49,992 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\branches\models.py changed, reloading.
+2023-11-21 14:34:50,883 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 14:34:58,784 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\branches\models.py changed, reloading.
+2023-11-21 14:34:59,750 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 14:37:58,427 django.request ERROR    Internal Server Error: /supersecret/auth/group/add/
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "auth_group_name_key"
+DETAIL:  Key (name)=(staff) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\options.py", line 1886, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\options.py", line 1798, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\contrib\admin\options.py", line 1227, in save_model
+    obj.save()
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Projects\Python\django-microfinex\.venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "auth_group_name_key"
+DETAIL:  Key (name)=(staff) already exists.
+
+2023-11-21 14:41:28,822 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\branches\views.py changed, reloading.
+2023-11-21 14:41:29,846 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 14:44:11,297 django.request WARNING  Unauthorized: /api/v1/branches/
+2023-11-21 14:46:00,056 django.request WARNING  Not Found: /api/v1/branches
+2023-11-21 14:48:59,955 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\branches\views.py changed, reloading.
+2023-11-21 14:49:01,892 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 14:49:12,022 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\branches\views.py changed, reloading.
+2023-11-21 14:49:12,991 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 14:49:24,298 django.request WARNING  Forbidden: /api/v1/branches/
+2023-11-21 14:50:43,763 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\branches\views.py changed, reloading.
+2023-11-21 14:50:44,870 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 14:50:49,994 django.request WARNING  Forbidden: /api/v1/branches/
+2023-11-21 15:02:59,556 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\branches\views.py changed, reloading.
+2023-11-21 15:03:01,210 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 15:03:09,604 django.request WARNING  Forbidden: /api/v1/branches/
+2023-11-21 15:03:23,078 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\branches\views.py changed, reloading.
+2023-11-21 15:03:24,133 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 15:03:49,368 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\branches\views.py changed, reloading.
+2023-11-21 15:03:50,434 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 15:08:05,358 django.request WARNING  Forbidden: /api/v1/branches/
+2023-11-21 15:08:24,211 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\branches\views.py changed, reloading.
+2023-11-21 15:08:25,376 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 15:08:41,653 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\branches\views.py changed, reloading.
+2023-11-21 15:08:42,786 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 15:08:47,749 django.request WARNING  Forbidden: /api/v1/branches/
+2023-11-21 15:08:50,920 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\branches\views.py changed, reloading.
+2023-11-21 15:08:52,015 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 15:10:59,704 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\branches\views.py changed, reloading.
+2023-11-21 15:11:01,019 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 15:15:17,666 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\branches\views.py changed, reloading.
+2023-11-21 15:15:19,316 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 15:15:55,577 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\branches\views.py changed, reloading.
+2023-11-21 15:15:56,699 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 15:16:02,368 django.request WARNING  Forbidden: /api/v1/branches/
+2023-11-21 15:16:13,018 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\branches\views.py changed, reloading.
+2023-11-21 15:16:13,981 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 15:16:46,663 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\branches\views.py changed, reloading.
+2023-11-21 15:16:47,755 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 15:17:58,213 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\branches\views.py changed, reloading.
+2023-11-21 15:17:59,323 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 15:25:55,337 django.request WARNING  Not Found: /api/v1/clients/
+2023-11-21 15:26:12,154 django.request WARNING  Bad Request: /api/v1/clients
+2023-11-21 15:26:57,830 django.request WARNING  Not Found: /api/v1/clients/
+2023-11-21 15:35:36,195 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\common\models.py changed, reloading.
+2023-11-21 15:35:39,371 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 15:35:50,555 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\common\models.py changed, reloading.
+2023-11-21 15:35:51,618 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 15:38:34,862 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\views.py changed, reloading.
+2023-11-21 15:38:36,043 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 15:42:36,110 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\serializers.py changed, reloading.
+2023-11-21 15:42:37,992 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 15:56:41,159 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\views.py changed, reloading.
+2023-11-21 15:56:45,116 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 15:57:47,863 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\views.py changed, reloading.
+2023-11-21 15:57:49,035 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 16:06:17,722 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\views.py changed, reloading.
+2023-11-21 16:06:19,816 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 16:07:39,610 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\views.py changed, reloading.
+2023-11-21 16:07:40,709 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-21 16:07:42,705 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\views.py changed, reloading.
+2023-11-21 16:07:43,601 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-22 18:54:11,594 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-22 19:04:22,955 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-12-01 08:15:34,489 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-12-01 08:44:08,188 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-12-01 08:44:41,128 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-12-01 08:45:04,372 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create

@@ -45,10 +45,10 @@ class Client(TimeStampedUserModel):
     #         super().save(*args, **kwargs) # Call the "real" save() method.
 
     #This is not included as part of the fields in the database
-    class Meta:
+    class Meta(TimeStampedUserModel.Meta): #We are extending the Meta class from the parent class
         verbose_name = "Client"
         verbose_name_plural = "Clients"
-        ordering = ["last_name", "first_name"]
+     
 
 class Phone(TimeStampedUserModel):   
     client = models.ForeignKey(

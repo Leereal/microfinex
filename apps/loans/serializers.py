@@ -17,9 +17,9 @@ class LoanCreateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Loan
-        exclude = ["updated_at", "pkid"]  # Exclude ref_code if you generate it automatically
+        exclude = ["updated_at"]  # Exclude ref_code if you generate it automatically
 
 class LoanViewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Loan
-        exclude = ["updated_at", "pkid"]  # Exclude ref_code if you generate it automatically
+        exclude = ["updated_at"]  # Exclude ref_code if you generate it automatically

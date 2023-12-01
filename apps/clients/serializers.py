@@ -15,11 +15,12 @@ class ClientSerializer(serializers.ModelSerializer):
     class Meta:       
         model = Client
         fields = [
-            'title', 'first_name', 'last_name', 'gender', 'email', 
+            'id','title', 'first_name', 'last_name', 'gender', 'email', 
             'address', 'city', 'state', 'zip_code', 'country', 'national_id', 
             'passport_number', 'passport_country', 'date_of_birth', 'guarantor', 
             'created_by', 'phones'
         ]
+        depth = 1
     
     def create(self, validated_data):
         phones_data = validated_data.pop('phones', [])  # Remove phones from the validated_data
