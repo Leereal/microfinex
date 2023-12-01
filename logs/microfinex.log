@@ -2364,3 +2364,4 @@ Traceback (most recent call last):
     raise ValueError(
 ValueError: save() prohibited to prevent data loss due to unsaved related object 'client'.
 2023-11-15 19:50:12,250 django.utils.autoreload INFO     D:\Projects\Python\django-microfinex\apps\clients\models.py changed, reloading.
+2023-11-15 19:50:13,307 django.utils.autoreload INFO     Watching for file changes with StatReloader
