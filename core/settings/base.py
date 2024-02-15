@@ -24,7 +24,8 @@ THIRD_PARTY_APPS = [
     "corsheaders", 
     "django_countries",  
     "phonenumber_field", 
-    "drf_yasg"
+    "drf_yasg",
+    "djcelery_email",
     ]
 
 LOCAL_APPS = [
@@ -123,6 +124,17 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CORS_URLS_REGEX = r"^/api/.*$" # CORS added to all API endpoints
 
 AUTH_USER_MODEL = "users.User" #We are telling django the location of our custom user 
+
+CELERY_BROKER_URL = env("CELERY_BROKER_URL")
+CELERY_RESULT_BACKEND = CELERY_BROKER_URL
+CELERY_ACCEPT_CONTENT = ["json"]
+CELERY_TASK_SERIALIZER = "json"
+CELERY_RESULT_SERIALIZER = "json"
+CELERY_RESULT_BACKEND_MAX_RETRIES = 10
+CELERY_TASK_SEND_SENT_EVENT = True
+
+if USE_TZ:
+    CELERY_TIMEZONE = TIME_ZONE
 
 LOGGING = {
     "version": 1,

@@ -53,3 +53,10 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
+EMAIL_BACKEND = "djcelery_email.backends.CeleryEmailBackend"
+EMAIL_HOST = env("EMAIL_HOST", default="mailhog")
+EMAIL_PORT = env("EMAIL_PORT")
+DEFAULT_FROM_EMAIL = "leereal08@ymail.com"
+DOMAIN = env("DOMAIN")
+SITE_NAME = "Microfinex Pro"

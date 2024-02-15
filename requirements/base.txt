@@ -12,3 +12,8 @@ Pillow
 argon2-cffi
 pytz
 django-taggit
+celery
+redis
+celery
+flower
+django-celery
