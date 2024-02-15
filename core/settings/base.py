@@ -17,9 +17,8 @@ DJANGO_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "django.contrib.sites",
+    "django.contrib.sites"
 ]
-
 THIRD_PARTY_APPS = [
     "rest_framework", 
     "corsheaders", 
@@ -64,17 +63,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "core.wsgi.application"
-
-
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "db.sqlite3",
-    }
-}
 
 PASSWORD_HASHERS = [
     "django.contrib.auth.hashers.PBKDF2PasswordHasher",
@@ -133,6 +121,8 @@ MEDIA_ROOT = str(ROOT_DIR/ "mediafiles")
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_URLS_REGEX = r"^/api/.*$" # CORS added to all API endpoints
+
+AUTH_USER_MODEL = "users.User" #We are telling django the location of our custom user 
 
 LOGGING = {
     "version": 1,
