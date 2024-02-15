@@ -1,4 +1,4 @@
--r base.typing_extensions
+-r base.txt
 
 psycopg2-binary
 
