@@ -14,6 +14,9 @@ pytz
 django-taggit
 celery
 redis
-celery
 flower
-django-celery
+django-celery-email
+django-allauth
+djangorestframework-simplejwt
+dj-rest-auth
+django-filter

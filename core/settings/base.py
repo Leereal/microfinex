@@ -1,11 +1,14 @@
 import environ
-env = environ.Env()
+
 from pathlib import Path
+from datetime import timedelta
+
+env = environ.Env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent  # 3 parents pointing to the root dir
 
-APP_DIR = ROOT_DIR / "core_apps"
+APP_DIR = ROOT_DIR / "apps"
 # Application definition
 
 DEBUG = env.bool("DJANGO_DEBUG", False)
@@ -26,12 +29,24 @@ THIRD_PARTY_APPS = [
     "phonenumber_field", 
     "drf_yasg",
     "djcelery_email",
+    "rest_framework.authtoken",
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    "dj_rest_auth",
+    "dj_rest_auth.registration",
+    'django_filters',
     ]
 
 LOCAL_APPS = [
     "apps.users",
     "apps.common",
-    "apps.profiles"
+    "apps.profiles",
+    "apps.clients",
+    "apps.next_of_kins",
+    "apps.countries",
+    "apps.branches",
+    "apps.user_branch",
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 MIDDLEWARE = [
@@ -43,6 +58,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "allauth.account.middleware.AccountMiddleware",
 ]
 
 ROOT_URLCONF = "core.urls"
@@ -123,9 +139,11 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_URLS_REGEX = r"^/api/.*$" # CORS added to all API endpoints
 
+DATABASES = {"default": env.db("DATABASE_URL")}
+
 AUTH_USER_MODEL = "users.User" #We are telling django the location of our custom user 
 
-CELERY_BROKER_URL = env("CELERY_BROKER_URL")
+CELERY_BROKER_URL = env("CELERY_BROKER")
 CELERY_RESULT_BACKEND = CELERY_BROKER_URL
 CELERY_ACCEPT_CONTENT = ["json"]
 CELERY_TASK_SERIALIZER = "json"
@@ -135,6 +153,49 @@ CELERY_TASK_SEND_SENT_EVENT = True
 
 if USE_TZ:
     CELERY_TIMEZONE = TIME_ZONE
+
+ALLOWED_HOSTS = ["*"]
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "dj_rest_auth.jwt_auth.JWTCookieAuthentication",  #This will set cookies and set refresh_token to empty on login
+    ],
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticated",
+    ],
+    "DEFAULT_FILTER_BACKENDS": ["django_filters.rest_framework.DjangoFilterBackend"],  
+}
+
+SIMPLE_JWT = {
+    "AUTH_HEADER_TYPES": ("Bearer",),
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
+    "ROTATE_REFRESH_TOKENS": True,
+    "SIGNING_KEY": env("SIGNING_KEY"),
+    "USER_ID_FIELD": "id",
+    "USER_ID_CLAIM": "user_id",
+}
+
+REST_AUTH = {
+    "USE_JWT":True,
+    "JWT_AUTH_COOKIE": "microfinex-acces-token",
+    "JWT_AUTH_REFRESH_COOKIE": "microfinex-refresh-token",
+    "REGISTER_SERIALIZER": "apps.users.serializers.CustomRegisterSerializer",
+}
+
+AUTHENTICATION_BACKENDS = [
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+]
+
+ACCOUNT_AUTHENTICATION_METHOD = "email"
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+ACCOUNT_CONFIRM_EMAIL_ON_GET = True
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_PASSWORD_INPUT_RENDER_VALUE = False
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
 
 LOGGING = {
     "version": 1,

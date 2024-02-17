@@ -1,4 +1,4 @@
-ARG PYTHON_VERSION=3.12.2-bullseye
+ARG PYTHON_VERSION=3.11.2-bullseye
 
 FROM python:${PYTHON_VERSION} as python
 
@@ -49,13 +49,13 @@ COPY ./docker/local/django/start /start
 RUN sed -i 's/\r$//g' /start
 RUN chmod +x /start
 
-# COPY ./docker/local/django/celery/worker/start /start-celeryworker
-# RUN sed -i 's/\r$//g' /start-celeryworker
-# RUN chmod +x /start-celeryworker
+COPY ./docker/local/django/celery/worker/start /start-celeryworker
+RUN sed -i 's/\r$//g' /start-celeryworker
+RUN chmod +x /start-celeryworker
 
-# COPY ./docker/local/django/celery/flower/start /start-flower
-# RUN sed -i 's/\r$//g' /start-flower
-# RUN chmod +x /start-flower
+COPY ./docker/local/django/celery/flower/start /start-flower
+RUN sed -i 's/\r$//g' /start-flower
+RUN chmod +x /start-flower
 
 
 COPY . ${APP_HOME}

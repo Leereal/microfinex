@@ -6,7 +6,7 @@ SECRET_KEY = env("DJANGO_SECRET_KEY", default="bWjYw3sb03X-ZllnYhvntFZ3RF_5LxORW
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-CSRF_TRUSTED_ORIGINS = ["http://localhost:8080"]
+CSRF_TRUSTED_ORIGINS = ["http://localhost:8080","http://172.25.241.154:8080"]
 
 # DB_USERNAME = env("POSTGRES_USER")
 # DB_PASSWORD = env("POSTGRES_PASSWORD")
@@ -43,16 +43,16 @@ CSRF_TRUSTED_ORIGINS = ["http://localhost:8080"]
 #     }
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'microfinex',
-        'USER': 'leereal',
-        'PASSWORD': 'mutabvuri$8',
-        'HOST': 'microfinex.ch0o6skwcb06.us-east-1.rds.amazonaws.com',
-        'PORT': '5432',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'microfinex',
+#         'USER': 'leereal',
+#         'PASSWORD': 'mutabvuri$8',
+#         'HOST': 'microfinex.ch0o6skwcb06.us-east-1.rds.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
 
 EMAIL_BACKEND = "djcelery_email.backends.CeleryEmailBackend"
 EMAIL_HOST = env("EMAIL_HOST", default="mailhog")

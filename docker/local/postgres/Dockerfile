@@ -1,6 +1,5 @@
 FROM postgres:15-bullseye
 
-
 COPY ./docker/local/postgres/maintenance /usr/local/bin/maintenance
 
 RUN chmod +x /usr/local/bin/maintenance/*
