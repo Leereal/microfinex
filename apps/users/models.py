@@ -19,7 +19,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     date_joined = models.DateTimeField(default=timezone.now)
-    branches = models.ManyToManyField(Branch, through="UserBranch",  through_fields=('user', 'branch'))  
+    branches = models.ManyToManyField(Branch, through="UserBranch",  through_fields=('user', 'branch'), related_name='branches')  
 
     #so as to use the email as auth
     USERNAME_FIELD = "email"

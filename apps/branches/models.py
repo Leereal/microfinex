@@ -13,7 +13,7 @@ class Branch(TimeStampedModel):
         verbose_name=_("phone number"), max_length=30, default=None, blank=True
     )
     is_active = models.BooleanField(default=True)
-    country = models.ForeignKey(Country, on_delete=models.CASCADE, related_name='branches', verbose_name=_("country"))
+    country = models.ForeignKey(Country, on_delete=models.CASCADE, related_name='country', verbose_name=_("country"))
 
     class Meta:
         verbose_name = _("branch")
