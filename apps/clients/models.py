@@ -55,6 +55,8 @@ class Client(TimeStampedModel):
     created_by = models.ForeignKey(User, verbose_name=_('Created By'), on_delete=models.SET_NULL, blank=True, null=True)
     branch = models.ForeignKey(Branch, verbose_name=_('Branch'), on_delete=models.CASCADE)
     is_active = models.BooleanField(_('Is Active'), default=True)
+    ip_address = models.CharField(max_length=45, blank=True, null=True)
+    device_details = models.TextField(blank=True, null=True)
 
     class Meta:
         verbose_name = _('Client')
@@ -72,7 +74,23 @@ class Client(TimeStampedModel):
         
         if self.passport_number and not self.passport_country:
             raise ValidationError({'passport_country': _('Passport Country must be provided if Passport Number is specified.')})
-       
+    
+    def save(self, *args, **kwargs):
+        if not self.pk:
+            super().save(*args, **kwargs)
+
+        # Capture IP address and device details before saving
+        if self.pk and 'request' in kwargs:
+            request = kwargs.pop('request')
+            self.ip_address = request.META.get('REMOTE_ADDR', None)
+            user_agent = request.META.get('HTTP_USER_AGENT', None)
+            if user_agent:
+                self.device_details = user_agent
+            if not self.created_by and request.user.is_authenticated:
+                self.created_by = request.user
+
+        super().save(*args, **kwargs)
+
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
 
@@ -86,8 +104,10 @@ class Contact(models.Model):
     whatsapp = models.BooleanField(_('WhatsApp'), default=False)
 
     def save(self, *args, **kwargs):
+        if not self.client_id:
+            raise ValueError("Client instance must have a primary key value before creating a contact.")
+
         super().save(*args, **kwargs)
         
-        # Check if the client has any contacts
         if not self.client.contacts.exists():
             raise ValidationError('At least one contact must be provided for the client.')

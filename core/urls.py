@@ -5,7 +5,7 @@ from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 from rest_framework import permissions
 from dj_rest_auth.views import  PasswordResetConfirmView
-from apps.users.views import CustomUserDetailsView
+from apps.users.views import CustomUserDetailsView, CustomUserEditView
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -27,6 +27,10 @@ urlpatterns = [
     path("api/v1/auth/registration/", include("dj_rest_auth.registration.urls")),
     path("api/v1/auth/password/reset/confirm/<uidb64>/<token>/", PasswordResetConfirmView.as_view(), name="password_reset_confirm"),
     path("api/v1/profiles/", include("apps.profiles.urls")),
+    path("api/v1/branches/", include("apps.branches.urls")),
+    path("api/v1/countries/", include("apps.countries.urls")),
+    path("api/v1/clients/", include("apps.clients.urls")),
+    path("api/v1/users/<int:pk>/update/", CustomUserEditView.as_view(), name="update_user"),  # Endpoint for editing user data
 ]
 
 admin.site.site_header = "Microfinex Pro Admin"

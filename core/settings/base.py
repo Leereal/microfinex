@@ -46,7 +46,6 @@ LOCAL_APPS = [
     "apps.next_of_kins",
     "apps.countries",
     "apps.branches",
-    "apps.user_branch",
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 MIDDLEWARE = [

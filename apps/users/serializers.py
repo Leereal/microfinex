@@ -5,14 +5,60 @@ from django.contrib.auth import get_user_model
 from django_countries.serializer_fields import CountryField
 from phonenumber_field.serializerfields import PhoneNumberField
 from rest_framework import serializers
+from apps.branches.models import Branch
+from .models import UserBranch
+from apps.branches.serializers import BranchSerializer
+from rest_framework.exceptions import ValidationError
+from rest_framework.serializers import ListSerializer
+
+
 
 User = get_user_model()
 
+class ListUserBranchSerializer(ListSerializer):
+    def update(self, instance, validated_data):
+        # Iterate over each validated data and update the corresponding instance
+        for data in validated_data:
+            branch_id = data.get('branch_id')
+            print("Instance : ", instance)
+            instance_obj = self.child.Meta.model.objects.filter(user=instance.user, branch_id=branch_id).first()
+            if instance_obj:
+                # Update the instance with the validated data
+                self.child.update(instance_obj, data)
+            else:
+                # Handle case when the instance doesn't exist
+                self.child.create(data)
+        return instance
+
+class UserBranchSerializer(serializers.ModelSerializer):
+    branch_id = serializers.PrimaryKeyRelatedField(queryset=Branch.objects.all())
+
+    class Meta:
+        model = UserBranch
+        fields = ['branch_id', 'is_active']
+        list_serializer_class = ListUserBranchSerializer
+    
+    def create(self, validated_data):
+        request = self.context.get('request')
+        if not request or not request.user:
+            raise ValidationError("Request or user not found in context.")
+        
+        validated_data['created_by'] = request.user
+        return super().create(validated_data)
+    
+    def update(self, instance, validated_data):
+        request = self.context.get('request')
+        if not request or not request.user:
+            raise ValidationError("Request or user not found in context.")
+        
+        validated_data['created_by'] = request.user
+        return super().update(instance, validated_data)
 
 class UserSerializer(serializers.ModelSerializer):
     gender = serializers.CharField(source="profile.gender")
     phone = PhoneNumberField(source="profile.phone")
     profile_photo = serializers.ReadOnlyField(source="profile.profile_photo.url")
+    branches = BranchSerializer(many=True, read_only=True)
 
     class Meta:
         model = User
@@ -24,13 +70,37 @@ class UserSerializer(serializers.ModelSerializer):
             "gender",
             "phone",
             "profile_photo",
+            "branches"
         ]
+    
+    def update(self, instance, validated_data):
+        branches_data = validated_data.pop('branches', None)
+        print("Update Branch : ", validated_data)
+        user = super().update(instance, validated_data)
+
+        if branches_data is not None:
+            # Clear existing user branches
+            user.user_branches.all().delete()
+
+            # Create new user branches
+            for branch_data in branches_data:
+                branch_id = branch_data['branch_id'].id
+                is_active = branch_data.get('is_active', False)
+                UserBranch.objects.create(user=user, branch_id=branch_id, is_active=is_active)
+
+        return user
 
     def to_representation(self, instance):
         representation = super(UserSerializer, self).to_representation(instance)
         if instance.is_superuser:
             representation["admin"] = True
         return representation
+
+    def get_full_name(self, obj):
+        return obj.get_full_name
+
+    def get_short_name(self, obj):
+        return obj.get_short_name
 
 
 class CustomRegisterSerializer(RegisterSerializer):
@@ -64,3 +134,5 @@ class CustomRegisterSerializer(RegisterSerializer):
         user.last_name = self.cleaned_data.get("last_name")
 
         return user
+
+

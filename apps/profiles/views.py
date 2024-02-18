@@ -39,7 +39,6 @@ class ProfileDetailAPIView(generics.RetrieveAPIView):
         profile = self.get_queryset().get(user=user)
         return profile
 
-
 class UpdateProfileAPIView(generics.RetrieveAPIView):
     serializer_class = UpdateProfileSerializer
     permission_classes = [IsAuthenticated]

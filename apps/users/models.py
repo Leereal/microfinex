@@ -4,6 +4,9 @@ from django.utils import timezone
 from django.core.validators import MinLengthValidator
 from django.utils.translation import gettext_lazy as _
 
+from apps.branches.models import Branch
+from apps.common.models import TimeStampedModel
+
 from .managers import CustomUserManager
 
 
@@ -16,7 +19,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     date_joined = models.DateTimeField(default=timezone.now)
-    
+    branches = models.ManyToManyField(Branch, through="UserBranch",  through_fields=('user', 'branch'))  
 
     #so as to use the email as auth
     USERNAME_FIELD = "email"
@@ -40,3 +43,17 @@ class User(AbstractBaseUser, PermissionsMixin):
     @property
     def get_short_name(self):
         return f"{self.first_name[:3]} {self.last_name[:3]}"
+    
+
+class UserBranch(TimeStampedModel):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_branches')
+    branch = models.ForeignKey(Branch, on_delete=models.CASCADE, related_name='user_branches')
+    is_active = models.BooleanField(default=True)
+    created_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='created_user_branches')
+
+    class Meta:
+        unique_together = ('user', 'branch')  # Ensure uniqueness of user-branch combination
+
+    def __str__(self):
+        return f"{self.user} - {self.branch}"
+    

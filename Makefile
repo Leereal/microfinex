@@ -54,3 +54,12 @@ isort-diff:
 
 isort:
 	docker compose -f local.yml exec api isort . --skip venv --skip migrations
+
+deletemigrations:
+	docker compose -f local.yml run --rm api find . -path "*/migrations/*.py" -not -name "__init__.py" -delete
+
+flush-db:
+	docker compose -f local.yml run --rm api python manage.py sqlflush | docker compose -f local.yml exec -T db psql -U postgres -d microfinex-dev
+
+delete-db:
+	docker compose -f local.yml down -v
