@@ -11,7 +11,7 @@ from apps.common.models import TimeStampedModel
 User = get_user_model()
 
 class Loan(TimeStampedModel):
-    client = models.ForeignKey(Client, on_delete=models.CASCADE)
+    client = models.ForeignKey(Client, on_delete=models.CASCADE, related_name='loans')
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='created_loans')
     approved_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='approved_loans', blank=True, null=True)
@@ -26,7 +26,7 @@ class Loan(TimeStampedModel):
     disbursement_date = models.DateTimeField()
     repayment_date = models.DateTimeField()
     status = models.ForeignKey(LoanStatus, on_delete=models.CASCADE)
-    branch = models.ForeignKey(Branch, on_delete=models.CASCADE)
+    branch = models.ForeignKey(Branch, on_delete=models.CASCADE, related_name='branch_loans')
 
     def __str__(self):
         return f"Loan ID: {self.id}, Client: {self.client}, Product: {self.product}"

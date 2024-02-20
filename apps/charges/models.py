@@ -20,12 +20,18 @@ class Charge(models.Model):
         ('manual', _('Manual')),
         ('auto', _('Auto')),
     ]
+    APPLICATION_CHOICES = [
+        ('principal', _('Principal')),
+        ('balance', _('Balance')),
+        ('other', _('Other')),
+    ]
 
     name = models.CharField(max_length=255, unique=True)
     description = models.TextField(blank=True)
     amount = models.DecimalField(max_digits=15, decimal_places=2)    
     amount_type = models.CharField(max_length=20, choices=AMOUNT_TYPE_CHOICES)   
     charge_type = models.CharField(max_length=20, choices=CHARGE_TYPE_CHOICES)
+    charge_application = models.CharField(max_length=20, choices=APPLICATION_CHOICES, default='principal')  # New field
     loan_status = models.ForeignKey('LoanStatus', on_delete=models.CASCADE)   
     frequency = models.CharField(max_length=20, choices=FREQUENCY_CHOICES)    
     mode = models.CharField(max_length=20, choices=MODE_CHOICES)

@@ -10,8 +10,7 @@ from .models import UserBranch
 from apps.branches.serializers import BranchSerializer
 from rest_framework.exceptions import ValidationError
 from rest_framework.serializers import ListSerializer
-
-
+from rest_framework.validators import UniqueTogetherValidator
 
 User = get_user_model()
 
@@ -20,7 +19,6 @@ class ListUserBranchSerializer(ListSerializer):
         # Iterate over each validated data and update the corresponding instance
         for data in validated_data:
             branch_id = data.get('branch_id')
-            print("Instance : ", instance)
             instance_obj = self.child.Meta.model.objects.filter(user=instance.user, branch_id=branch_id).first()
             if instance_obj:
                 # Update the instance with the validated data
@@ -37,6 +35,13 @@ class UserBranchSerializer(serializers.ModelSerializer):
         model = UserBranch
         fields = ['branch_id', 'is_active']
         list_serializer_class = ListUserBranchSerializer
+
+        validators = [
+            UniqueTogetherValidator(
+                queryset=UserBranch.objects.all(),
+                fields=['user', 'branch']
+            )
+        ]
     
     def create(self, validated_data):
         request = self.context.get('request')

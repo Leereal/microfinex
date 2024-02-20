@@ -18,8 +18,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     )
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
-    date_joined = models.DateTimeField(default=timezone.now)
-    branches = models.ManyToManyField(Branch, through="UserBranch",  through_fields=('user', 'branch'), related_name='branches')  
+    date_joined = models.DateTimeField(null=True, blank=True)
+    branches = models.ManyToManyField(Branch, through="UserBranch",  through_fields=('user', 'branch'), related_name='branch_users')  
 
     #so as to use the email as auth
     USERNAME_FIELD = "email"
@@ -46,12 +46,14 @@ class User(AbstractBaseUser, PermissionsMixin):
     
 
 class UserBranch(TimeStampedModel):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_branches')
-    branch = models.ForeignKey(Branch, on_delete=models.CASCADE, related_name='user_branches')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_branch')
+    branch = models.ForeignKey(Branch, on_delete=models.CASCADE, related_name='branch_user')
     is_active = models.BooleanField(default=True)
     created_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='created_user_branches')
 
     class Meta:
+        verbose_name = _("userbranch")
+        verbose_name_plural = _("User Branch") 
         unique_together = ('user', 'branch')  # Ensure uniqueness of user-branch combination
 
     def __str__(self):

@@ -39,13 +39,22 @@ THIRD_PARTY_APPS = [
     ]
 
 LOCAL_APPS = [
-    "apps.users",
     "apps.common",
-    "apps.profiles",
-    "apps.clients",
-    "apps.next_of_kins",
-    "apps.countries",
     "apps.branches",
+    "apps.currencies",
+    "apps.users",  
+    "apps.profiles",
+    "apps.audits",   
+    # "apps.clients",
+    # "apps.next_of_kins",
+    # "apps.loan_applications",
+    # "apps.branch_assets",
+    # "apps.documents",
+    # "apps.smses",
+    # "apps.emails",
+    # "apps.notifications",
+    # "apps.loans",
+    # "apps.loan_transactions"
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 MIDDLEWARE = [

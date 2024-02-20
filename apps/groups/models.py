@@ -3,6 +3,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from apps.common.models import TimeStampedModel
 from apps.branches.models import Branch
+from apps.groups.models import Group 
 
 User = get_user_model()
 
@@ -18,6 +19,7 @@ class Group(TimeStampedModel):
     phone = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
     branch = models.ForeignKey(Branch, on_delete=models.CASCADE)
+    group = models.ForeignKey(Group, on_delete=models.CASCADE)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     status = models.CharField(
         max_length=20,

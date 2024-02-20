@@ -33,7 +33,7 @@ class Profile(TimeStampedModel):
         max_length=20,
     )   
     profile_photo = models.ImageField(
-        verbose_name=_("profile photo"), default="/profile_default.png"
+        verbose_name=_("profile photo"), default=None, blank=True, null=True
     ) 
 
     def __str__(self):

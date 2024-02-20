@@ -3,7 +3,6 @@ from .models import Branch
 
 class BranchAdmin(admin.ModelAdmin):
     list_display = ('name', 'address', 'email', 'phone', 'is_active', 'country')
-    list_filter = ('is_active', 'country')
     search_fields = ('name', 'address', 'email', 'phone')
 
 admin.site.register(Branch, BranchAdmin)

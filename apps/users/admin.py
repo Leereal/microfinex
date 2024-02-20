@@ -51,6 +51,5 @@ class UserAdmin(BaseUserAdmin):
     )
     search_fields = ["email", "first_name", "last_name"]
 
-
 admin.site.register(User, UserAdmin)
 admin.site.register(UserBranch)

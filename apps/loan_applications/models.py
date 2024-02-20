@@ -1,3 +1,4 @@
+import re
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.utils.translation import gettext_lazy as _
@@ -14,7 +15,7 @@ class LoanApplication(TimeStampedModel):
         PENDING = 'pending', _('Pending')
         CANCELLED = 'cancelled', _('Cancelled')
 
-    client = models.ForeignKey(Client, on_delete=models.CASCADE)
+    client = models.ForeignKey(Client, on_delete=models.CASCADE, related_name='loan_applications')
     amount = models.DecimalField(max_digits=15, decimal_places=2)
     status = models.CharField(max_length=20, choices=Status.choices)
     rejection_reason = models.ForeignKey('RejectionReason', on_delete=models.SET_NULL, null=True)
