@@ -3,7 +3,7 @@ from django.core.mail import send_mail
 from rest_framework import generics, status
 from rest_framework.exceptions import NotFound
 from rest_framework.parsers import MultiPartParser
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -26,7 +26,7 @@ class ProfileListAPIView(generics.ListAPIView):
 
 #Get single user profile
 class ProfileDetailAPIView(generics.RetrieveAPIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, IsAdminUser]
     serializer_class = ProfileSerializer
     renderer_classes = [ProfileJSONRenderer]
 

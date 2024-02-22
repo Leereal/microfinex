@@ -18,6 +18,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     )
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
+    active_branch = models.ForeignKey(Branch, on_delete=models.SET_NULL, null=True, blank=True, related_name='active_users')
     date_joined = models.DateTimeField(null=True, blank=True)
     branches = models.ManyToManyField(Branch, through="UserBranch",  through_fields=('user', 'branch'), related_name='branch_users')  
 
@@ -46,7 +47,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     
 
 class UserBranch(TimeStampedModel):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_branch')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_branches')
     branch = models.ForeignKey(Branch, on_delete=models.CASCADE, related_name='branch_user')
     is_active = models.BooleanField(default=True)
     created_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='created_user_branches')

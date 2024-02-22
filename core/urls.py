@@ -28,6 +28,9 @@ urlpatterns = [
     path("api/v1/auth/password/reset/confirm/<uidb64>/<token>/", PasswordResetConfirmView.as_view(), name="password_reset_confirm"),
     path("api/v1/profiles/", include("apps.profiles.urls")),
     path("api/v1/branches/", include("apps.branches.urls")),
+    path("api/v1/currencies/", include("apps.currencies.urls")),
+    path("api/v1/branch-assets/", include("apps.branch_assets.urls")),
+    path("api/v1/change-audits/", include("apps.audits.urls")),
     # path("api/v1/clients/", include("apps.clients.urls")),
     path("api/v1/users/<int:pk>/update/", CustomUserEditView.as_view(), name="update_user"),  # Endpoint for editing user data
     # path("api/v1/", include("apps.loan_applications.urls")),

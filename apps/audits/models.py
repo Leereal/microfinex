@@ -1,3 +1,4 @@
+from email.policy import default
 from django.conf import settings
 from django.db import models
 from django.contrib.auth.models import User
@@ -14,9 +15,9 @@ class AuditLog(TimeStampedModel):
     # The name of the field that was changed
     field_name = models.CharField(max_length=100)    
     # The old value of the field
-    old_value = models.TextField()    
+    old_value = models.TextField(default=None, null=True)    
     # The new value of the field
-    new_value = models.TextField()
+    new_value = models.TextField(default=None, null=True)
     # The action that was taken (created, updated, deleted)
     action = models.CharField(max_length=255, null=True)
 

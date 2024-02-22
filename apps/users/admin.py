@@ -19,6 +19,7 @@ class UserAdmin(BaseUserAdmin):
         "last_name",
         "is_staff",
         "is_active",
+        "active_branch",
     ]
 
     list_display_links = ["id", "email"]
@@ -34,6 +35,7 @@ class UserAdmin(BaseUserAdmin):
                 "fields": (
                     "is_active",
                     "is_staff",
+                    "active_branch",
                     "is_superuser",
                     "groups",
                     "user_permissions",

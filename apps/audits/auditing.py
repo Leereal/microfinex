@@ -1,9 +1,12 @@
+import json
 from django.conf import settings
 from django.db import models
 from django.db.models.signals import pre_save, post_save, pre_delete
 from django.contrib.auth import get_user_model
 from django.dispatch import receiver
 from django.forms.models import model_to_dict
+
+from apps.audits.serializers import AuditLogSerializer
 from .models import AuditLog
 
 class AuditableMixin(models.Model):
@@ -45,26 +48,35 @@ def post_save_handler(sender, instance, created, request=None, **kwargs):
 
             if changes:
                 for field_name, old_value, new_value in changes:
-                    AuditLog.objects.create(
-                        user=request.user if request and request.user.is_authenticated else None,
-                        action=action,
-                        model_name=sender.__name__,
-                        record_id=instance.pk,
-                        field_name=field_name,
-                        old_value=old_value if old_value is not None else "",
-                        new_value=new_value
-                    )
+                    # Create AuditLog instance using serializer
+                    serializer = AuditLogSerializer(data={
+                        'user': request.user if request and request.user.is_authenticated else None,
+                        'action': action,
+                        'model_name': sender.__name__,
+                        'record_id': instance.pk,
+                        'field_name': field_name,
+                        'old_value': old_value if old_value is not None else " ",
+                        'new_value': new_value
+                    })
+                    serializer.is_valid(raise_exception=True)
+                    serializer.save()
+
 
 @receiver(pre_delete)
 def pre_delete_handler(sender, instance, request=None, **kwargs):
     if issubclass(sender, AuditableMixin):
         instance._old_values = model_to_dict(instance)
-        AuditLog.objects.create(
-            user=request.user if request and request.user.is_authenticated else None,
-            action='deleted',
-            model_name=sender.__name__,
-            record_id=instance.pk,
-            field_name='all fields',
-            old_value=model_to_dict(instance),
-            new_value=None
-        )
+        # Create AuditLog instance using serializer
+        old_values = {key: str(value) for key, value in model_to_dict(instance).items()}
+        old_values = json.dumps(old_values)
+        serializer = AuditLogSerializer(data={
+            'user': request.user if request and request.user.is_authenticated else None,
+            'action': 'deleted',
+            'model_name': sender.__name__,
+            'record_id': instance.pk,
+            'field_name': 'all fields',
+            'old_value': old_values,
+            'new_value': None
+        })
+        serializer.is_valid(raise_exception=True)
+        serializer.save()

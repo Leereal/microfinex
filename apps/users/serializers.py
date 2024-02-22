@@ -1,3 +1,4 @@
+from os import read
 from allauth.account.adapter import get_adapter
 from allauth.account.utils import setup_user_email
 from dj_rest_auth.registration.serializers import RegisterSerializer
@@ -11,6 +12,9 @@ from apps.branches.serializers import BranchSerializer
 from rest_framework.exceptions import ValidationError
 from rest_framework.serializers import ListSerializer
 from rest_framework.validators import UniqueTogetherValidator
+from dj_rest_auth.serializers import LoginSerializer as RestAuthLoginSerializer
+from dj_rest_auth.models import TokenModel
+
 
 User = get_user_model()
 
@@ -75,12 +79,12 @@ class UserSerializer(serializers.ModelSerializer):
             "gender",
             "phone",
             "profile_photo",
+            "active_branch",
             "branches"
         ]
     
     def update(self, instance, validated_data):
         branches_data = validated_data.pop('branches', None)
-        print("Update Branch : ", validated_data)
         user = super().update(instance, validated_data)
 
         if branches_data is not None:
@@ -90,7 +94,7 @@ class UserSerializer(serializers.ModelSerializer):
             # Create new user branches
             for branch_data in branches_data:
                 branch_id = branch_data['branch_id'].id
-                is_active = branch_data.get('is_active', False)
+                is_active = branch_data.get('is_active', True)
                 UserBranch.objects.create(user=user, branch_id=branch_id, is_active=is_active)
 
         return user
@@ -99,6 +103,9 @@ class UserSerializer(serializers.ModelSerializer):
         representation = super(UserSerializer, self).to_representation(instance)
         if instance.is_superuser:
             representation["admin"] = True
+            # Add active_branch and branches data
+            representation["active_branch"] = instance.active_branch.id if instance.active_branch else None
+            representation["branches"] = instance.branches.values_list('id', flat=True)
         return representation
 
     def get_full_name(self, obj):
@@ -113,8 +120,10 @@ class CustomRegisterSerializer(RegisterSerializer):
     first_name = serializers.CharField(required=True)
     last_name = serializers.CharField(required=True)
     email = serializers.EmailField(required=True)
+    active_branch = serializers.PrimaryKeyRelatedField(read_only=True)
     password1 = serializers.CharField(write_only=True)
     password2 = serializers.CharField(write_only=True)
+    branches = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
 
     def get_cleaned_data(self):
         super().get_cleaned_data()
@@ -139,5 +148,4 @@ class CustomRegisterSerializer(RegisterSerializer):
         user.last_name = self.cleaned_data.get("last_name")
 
         return user
-
 

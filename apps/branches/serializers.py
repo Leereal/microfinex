@@ -23,7 +23,7 @@ class BranchSerializer(serializers.ModelSerializer):
             "email",
             "phone",
             "is_active",
-            # "users",
+            # "branch_users" #bad idea since it exposes the password. Use serializer instead       
         ]
-        depth = 1
+        # depth = 2
         #You can specify the fields you don't want to be added or updated it's values
