@@ -12,9 +12,6 @@ from apps.branches.serializers import BranchSerializer
 from rest_framework.exceptions import ValidationError
 from rest_framework.serializers import ListSerializer
 from rest_framework.validators import UniqueTogetherValidator
-from dj_rest_auth.serializers import LoginSerializer as RestAuthLoginSerializer
-from dj_rest_auth.models import TokenModel
-
 
 User = get_user_model()
 
