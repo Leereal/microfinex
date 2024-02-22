@@ -2,16 +2,15 @@ from rest_framework import generics, status
 from rest_framework.permissions import IsAuthenticated,IsAdminUser, DjangoModelPermissions
 from rest_framework.response import Response
 
+from core.permissions import IsSuperuser
+
 from .models import Branch
 from .serializers import BranchSerializer
-
-from django.contrib.auth.models import User
-from rest_framework.permissions import BasePermission
 
 class BranchListAPIView(generics.ListCreateAPIView):
     queryset = Branch.objects.all()
     serializer_class = BranchSerializer
-    permission_classes = [IsAuthenticated, IsAdminUser]
+    permission_classes = [IsAuthenticated, IsSuperuser]
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
@@ -24,4 +23,4 @@ class BranchListAPIView(generics.ListCreateAPIView):
 class BranchDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Branch.objects.all()
     serializer_class = BranchSerializer
-    permission_classes = [IsAuthenticated, IsAdminUser]   
+    permission_classes = [IsAuthenticated, IsSuperuser]   

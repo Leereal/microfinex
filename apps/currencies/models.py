@@ -1,8 +1,9 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from apps.audits.auditing import AuditableMixin
 from apps.common.models import TimeStampedModel
 
-class Currency(TimeStampedModel):
+class Currency(AuditableMixin,TimeStampedModel):
     name = models.CharField(max_length=255, unique=True)
     code = models.CharField(max_length=10, unique=True)
     symbol = models.CharField(max_length=10, unique=True)
@@ -14,3 +15,7 @@ class Currency(TimeStampedModel):
 
     def __str__(self):
         return self.name
+    
+    def get_audit_fields(self):
+        # Dynamically retrieve all field names from the model
+        return [field.name for field in self._meta.fields]

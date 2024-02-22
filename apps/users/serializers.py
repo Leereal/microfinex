@@ -93,7 +93,7 @@ class UserSerializer(serializers.ModelSerializer):
 
             # Create new user branches
             for branch_data in branches_data:
-                branch_id = branch_data['branch_id'].id
+                branch_id = branch_data['branch'].id
                 is_active = branch_data.get('is_active', True)
                 UserBranch.objects.create(user=user, branch_id=branch_id, is_active=is_active)
 

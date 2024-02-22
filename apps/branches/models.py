@@ -4,16 +4,17 @@ from django_countries.fields import CountryField
 from phonenumber_field.modelfields import PhoneNumberField
 from apps.audits.auditing import AuditableMixin
 from apps.common.models import TimeStampedModel
+from django.core.validators import MinLengthValidator
 
 class Branch(AuditableMixin, TimeStampedModel):  # Inherit from AuditableMixin
-    name = models.CharField(verbose_name=_("name"), max_length=255)
+    name = models.CharField(verbose_name=_("name"), max_length=255, validators=[MinLengthValidator(3)])
     address = models.TextField(verbose_name=_("address"), max_length=255, blank=True)
     email = models.EmailField(verbose_name=_("email address"), default=None, blank=True)
     phone = PhoneNumberField(
         verbose_name=_("phone number"), max_length=30, default=None, blank=True
     )
-    is_active = models.BooleanField(default=True)
-    country = models.CharField(max_length=200,  null=True, choices=CountryField().choices + [('', 'Select Country')])
+    is_active = models.BooleanField(verbose_name=_("is active"),default=True)
+    country = models.CharField(verbose_name=_("country"),max_length=200,  null=True, choices=CountryField().choices + [('', 'Select Country')])
 
 
     class Meta:
