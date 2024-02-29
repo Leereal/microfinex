@@ -1,5 +1,7 @@
 # from os import read
 # from rest_framework import serializers
+# from apps.loans.models import Loan
+# from apps.loans.serializers import LoanSerializer
 
 # from apps.next_of_kins.serializers import NextOfKinSerializer
 # from .models import Client, Contact
@@ -36,10 +38,25 @@
 #         list_serializer_class = ContactListSerializer
 
 # class ClientSerializer(serializers.ModelSerializer):
-#     loans = serializers.StringRelatedField(many=True, read_only=True)
+#     loans = serializers.SerializerMethodField()
+#     loans_count = serializers.SerializerMethodField()
 #     loan_applications = serializers.StringRelatedField(many=True, read_only=True)
 #     contacts = ContactListSerializer(many=True)
 #     next_of_kin = NextOfKinSerializer(required=False)
+#     average_loan = serializers.ReadOnlyField()
+
+#     def get_average_loan(self,obj):
+#         return obj.average_loan()
+    
+#     #Keep this. We 
+#     def get_loans(self,obj):
+#         loans = Loan.objects.filter(client=obj)
+#         return LoanSerializer(loans, many=True).data
+    
+#     def get_loans_count(self,obj):
+#         return Loan.objects.filter(client=obj).count() 
+
+
     
 #     class Meta:
 #         model = Client
@@ -71,9 +88,11 @@
 #             "ip_address",
 #             "device_details",
 #             "loans",
+#             "loans_count",
 #             "loan_applications",
 #             "contacts",
 #             "next_of_kin",
+#             "average_loan"
 #         ]
 
 #     def create(self, validated_data):
@@ -81,17 +100,17 @@
 #         next_of_kin_data = validated_data.pop('next_of_kin',None)
 #         client = Client.objects.create(**validated_data)
         
-#         #Save contacts and atleast one contact is required
-#         # if contacts_data:
-#         #     for contact_data in contacts_data:
-#         #         Contact.objects.create(client=client, **contact_data)
-#         # else:
-#         #     raise ValidationError("Contacts data is required.")
+        #Save contacts and atleast one contact is required
+        # if contacts_data:
+        #     for contact_data in contacts_data:
+        #         Contact.objects.create(client=client, **contact_data)
+        # else:
+        #     raise ValidationError("Contacts data is required.")
         
-#         if next_of_kin_data:
-#             NextOfKinSerializer.create(NextOfKinSerializer(), next_of_kin_data, client)
+        # if next_of_kin_data:
+        #     NextOfKinSerializer.create(NextOfKinSerializer(), next_of_kin_data, client)
 
-#         return client
+        # return client
 
 # class UpdateClientSerializer(serializers.ModelSerializer):
 #     class Meta:

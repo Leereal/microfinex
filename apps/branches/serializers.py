@@ -14,6 +14,11 @@ class BranchSerializer(serializers.ModelSerializer):
     #We can also use hyperlinked relationships that is HyperlinkedRelatedField
     # We can use SlugRelatedField if we want to use a slug field such as username
     #We can use HyperlinkedIdentityField if we want to use a hyperlink to the object
+    # average_loan = serializers.ReadOnlyField()
+
+    # def get_average_loan(self, obj):
+    #     return obj.average_loan()
+
     class Meta:
         model = Branch
         fields = [
@@ -23,7 +28,15 @@ class BranchSerializer(serializers.ModelSerializer):
             "email",
             "phone",
             "is_active",
-            # "branch_users" #bad idea since it exposes the password. Use serializer instead       
+            # "average_loan",
+            # "total_clients",
+            # "total_loans",
+            # "total_disbursements",
+            # "total_repayments",
+            # "this_month_disbursements",
+            # "this_month_repayments",
+            # "percentage_target"
+            # "users" #bad idea since it exposes the password. Use serializer instead       
         ]
         # depth = 2
         #You can specify the fields you don't want to be added or updated it's values

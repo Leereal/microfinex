@@ -11,7 +11,7 @@ from apps.common.models import TimeStampedModel
 from .managers import CustomUserManager
 
 
-class User(AbstractBaseUser, PermissionsMixin, AuditableMixin):
+class User(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(verbose_name=_("first name"), max_length=50, validators=[MinLengthValidator(3)])
     last_name = models.CharField(verbose_name=_("last name"), max_length=50, validators=[MinLengthValidator(3)])
     email = models.EmailField(
@@ -21,7 +21,7 @@ class User(AbstractBaseUser, PermissionsMixin, AuditableMixin):
     is_active = models.BooleanField(default=True)
     active_branch = models.ForeignKey(Branch, on_delete=models.SET_NULL, null=True, blank=True, related_name='active_users')
     date_joined = models.DateTimeField(null=True, blank=True)
-    branches = models.ManyToManyField(Branch, through="UserBranch",  through_fields=('user', 'branch'), related_name='branch_users')  
+    branches = models.ManyToManyField(Branch, through="UserBranch",  through_fields=('user', 'branch'), related_name='users')  
 
     #so as to use the email as auth
     USERNAME_FIELD = "email"
@@ -31,6 +31,9 @@ class User(AbstractBaseUser, PermissionsMixin, AuditableMixin):
     objects = CustomUserManager()
 
     class Meta:
+        permissions =[
+            ("ban_user","Can Ban User"),
+        ]
         verbose_name = _("user")
         verbose_name_plural = _("users")
 
@@ -46,12 +49,12 @@ class User(AbstractBaseUser, PermissionsMixin, AuditableMixin):
     def get_short_name(self):
         return f"{self.first_name[:3]} {self.last_name[:3]}"
     
-    def get_audit_fields(self):
-        # Dynamically retrieve all field names from the model
-        return ['first_name', 'last_name', 'email', 'is_staff', 'is_active', 'active_branch', 'date_joined', 'branches']
+    # def get_audit_fields(self):
+    #     # Dynamically retrieve all field names from the model
+    #     return ['first_name', 'last_name', 'email', 'is_staff', 'is_active', 'active_branch', 'date_joined', 'branches']
     
 
-class UserBranch(AuditableMixin,TimeStampedModel):
+class UserBranch(TimeStampedModel):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_branches')
     branch = models.ForeignKey(Branch, on_delete=models.CASCADE, related_name='branch_user')
     is_active = models.BooleanField(default=True)
@@ -63,9 +66,9 @@ class UserBranch(AuditableMixin,TimeStampedModel):
         unique_together = ('user', 'branch')  # Ensure uniqueness of user-branch combination
 
     def __str__(self):
-        return f"{self.user} - {self.branch}"
+        return f"{self.user.first_name} assigned to  {self.branch.name} branch"
     
-    def get_audit_fields(self):
-        # Dynamically retrieve all field names from the model
-        return [field.name for field in self._meta.fields]
+    # def get_audit_fields(self):
+    #     # Dynamically retrieve all field names from the model
+    #     return [field.name for field in self._meta.fields]
     

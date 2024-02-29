@@ -188,8 +188,9 @@ REST_AUTH = {
     "USE_JWT":True,
     "JWT_AUTH_COOKIE": "microfinex-acces-token",
     "JWT_AUTH_REFRESH_COOKIE": "microfinex-refresh-token",
-    "REGISTER_SERIALIZER": "apps.users.serializers.CustomRegisterSerializer",
+    "REGISTER_SERIALIZER": "apps.users.serializers.CustomRegisterSerializer"
 }
+
 
 AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
@@ -226,3 +227,9 @@ LOGGING = {
        "handlers": ["console"],
    }
 }
+
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000","http://127.0.0.1:3000"]
+CORS_ALLOW_CREDENTIALS = True
+ACCOUNT_ADAPTER = "apps.users.auth_emails.CustomAccountAdapter"
+
+

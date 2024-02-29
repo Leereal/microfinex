@@ -94,6 +94,9 @@
 #     def __str__(self):
 #         return f"{self.first_name} {self.last_name}"
 
+        # def get_full_name(self):
+        #     return f"{self.title.title()} {self.first_name.title()} {self.last_name.title()}"
+
 # class Contact(models.Model):
 #     client = models.ForeignKey(Client, verbose_name=_('Client'), related_name='contacts', on_delete=models.CASCADE)
 #     country_code = models.CharField(_('Country Code'), max_length=5)
@@ -111,3 +114,13 @@
         
 #         if not self.client.contacts.exists():
 #             raise ValidationError('At least one contact must be provided for the client.')
+
+#     def average_loan(self): # We can also include this to client serializer
+#         #We are getting all loans based on the relationship related_name in loans model
+#         loans = self.loans.all()
+#         if loans.count() > 0:
+#             # let's iterate through each loan and get the amount then sum them
+#             total_loans = sum(loan.amount for loan in loans)
+#             average_loan = total_loans / loans.count()
+#             return round(average_loan,2)
+#         return None

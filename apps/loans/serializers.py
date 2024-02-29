@@ -6,11 +6,20 @@ from .models import Loan
 class LoanSerializer(serializers.ModelSerializer):
     # branch = serializers.PrimaryKeyRelatedField(queryset=Branch.objects.all())
     # client = serializers.PrimaryKeyRelatedField(queryset=Client.objects.all())
+    client_full_name = serializers.ReadOnlyField()
+    branch_name = serializers.CharField(source="branch.name", read_only=True)
+
+    # I want to see if the property decorator makes this work
+    loan_created_by = serializers.CharField(source="user.full_name", read_only=True )
+    loan_approved_by = serializers.CharField(source="user.full_name", read_only=True )
+
+    def get_client_full_name(self,obj):
+        return obj.full_name()
 
 
     class Meta:
         model = Loan
-        fields = '__all__'
+        fields = ["client_full_name","branch_name","loan_created_by","loan_approved_by","amount"]
 
    
     # def amount_validator(self, amount):

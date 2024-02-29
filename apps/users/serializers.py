@@ -1,4 +1,3 @@
-from os import read
 from allauth.account.adapter import get_adapter
 from allauth.account.utils import setup_user_email
 from dj_rest_auth.registration.serializers import RegisterSerializer
@@ -30,11 +29,12 @@ class ListUserBranchSerializer(ListSerializer):
         return instance
 
 class UserBranchSerializer(serializers.ModelSerializer):
-    branch_id = serializers.PrimaryKeyRelatedField(queryset=Branch.objects.all())
+    branch_name = serializers.CharField(source="branch.name", read_only=True)
+    user_first_name = serializers.CharField(source="user.first_name", read_only=True)
 
     class Meta:
         model = UserBranch
-        fields = ['branch_id', 'is_active']
+        fields = ['id','user_name','branch_name','is_active']
         list_serializer_class = ListUserBranchSerializer
 
         validators = [
@@ -63,22 +63,15 @@ class UserBranchSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     gender = serializers.CharField(source="profile.gender")
     phone = PhoneNumberField(source="profile.phone")
-    profile_photo = serializers.ReadOnlyField(source="profile.profile_photo.url")
+    profile_photo = serializers.ReadOnlyField(source="profile.profile_photo.url", required=False)
     branches = BranchSerializer(many=True, read_only=True)
+    full_name = serializers.SerializerMethodField()
+    short_name = serializers.SerializerMethodField()
 
     class Meta:
         model = User
-        fields = [
-            "id",
-            "email",
-            "first_name",
-            "last_name",
-            "gender",
-            "phone",
-            "profile_photo",
-            "active_branch",
-            "branches"
-        ]
+        exclude = ('password',)
+        depth = 5      
     
     def update(self, instance, validated_data):
         branches_data = validated_data.pop('branches', None)
@@ -102,7 +95,11 @@ class UserSerializer(serializers.ModelSerializer):
             representation["admin"] = True
             # Add active_branch and branches data
             representation["active_branch"] = instance.active_branch.id if instance.active_branch else None
-            representation["branches"] = instance.branches.values_list('id', flat=True)
+            branches_representation = [
+                {'id': branch.id, 'name': branch.name} 
+                for branch in instance.branches.all()
+            ]
+            representation["branches"] = branches_representation
         return representation
 
     def get_full_name(self, obj):

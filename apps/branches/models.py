@@ -24,6 +24,17 @@ class Branch(AuditableMixin, TimeStampedModel):  # Inherit from AuditableMixin
     def __str__(self):
         return self.name
 
+    
+    def average_loan(self): # We can also include this to branch serializer
+        #We are getting all loans based on the relationship related_name in branch_loans model
+        loans = self.branch_loans.all()
+        if loans.count() > 0:
+            # let's iterate through each loan and get the amount then sum them
+            total_loans = sum(loan.amount for loan in loans)
+            average_loan = total_loans / loans.count()
+            return round(average_loan,2)
+        return None
+
     def get_audit_fields(self):
         # Override the get_audit_fields method to specify fields to audit
         return ['name', 'address', 'email', 'phone', 'is_active', 'country']

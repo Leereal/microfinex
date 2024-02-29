@@ -1,13 +1,14 @@
 from rest_framework import generics, status
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.response import Response
+from apps.branch_assets.permissions import CanAddBranchAsset
 
 from core.permissions import  BelongsToSameBranch, IsOwner
 from .models import BranchAssets
 from .serializers import BranchAssetSerializer
 
 class BranchAssetsListCreateAPIView(generics.ListCreateAPIView):
-    permission_classes = [IsAuthenticated, IsAdminUser, BelongsToSameBranch]
+    permission_classes = [IsAuthenticated, CanAddBranchAsset ]
     queryset = BranchAssets.objects.all()
     serializer_class = BranchAssetSerializer    
 
