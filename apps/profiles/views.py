@@ -22,13 +22,13 @@ class ProfileListAPIView(generics.ListAPIView):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
     pagination_class = ProfilePagination
-    renderer_classes = [ProfilesJSONRenderer]
+    # renderer_classes = [ProfilesJSONRenderer]
 
 #Get single user profile
 class ProfileDetailAPIView(generics.RetrieveAPIView):
     permission_classes = [IsAuthenticated, IsAdminUser]
     serializer_class = ProfileSerializer
-    renderer_classes = [ProfileJSONRenderer]
+    # renderer_classes = [ProfileJSONRenderer]
 
     def get_queryset(self):
         queryset = Profile.objects.select_related("user")
@@ -44,7 +44,7 @@ class UpdateProfileAPIView(generics.RetrieveAPIView):
     permission_classes = [IsAuthenticated]
     #set to MultiParParser so that we will be able to handle the file upload for profile photo
     parser_classes = [MultiPartParser]
-    renderer_classes = [ProfileJSONRenderer]
+    # renderer_classes = [ProfileJSONRenderer]
 
     def get_object(self):
         profile = self.request.user.profile

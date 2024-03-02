@@ -4,10 +4,14 @@ from apps.audits.auditing import AuditableMixin
 from apps.common.models import TimeStampedModel
 
 class Currency(AuditableMixin,TimeStampedModel):
+    class Type(models.TextChoices):
+        EMAIL = 'before', _('Before')
+        SMS = 'after', _('After')
     name = models.CharField(max_length=255, unique=True)
     code = models.CharField(max_length=10, unique=True)
     symbol = models.CharField(max_length=10, unique=True)
-    is_active = models.BooleanField(default=True)   
+    position = models.CharField(max_length=10, default="before")
+    is_active = models.BooleanField(default=True)
 
     class Meta:
         verbose_name = _("currency")

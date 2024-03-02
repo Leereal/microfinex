@@ -3,6 +3,7 @@
 from django.core.management.base import BaseCommand
 from apps.branch_assets.models import BranchAssets
 from apps.branches.models import Branch
+from apps.periods.models import Period
 from apps.users.models import User, UserBranch
 from faker import Faker
 import random
@@ -58,5 +59,14 @@ class Command(BaseCommand):
             branches = Branch.objects.order_by('?')[:random.randint(1, 3)]
             for branch in branches:
                 UserBranch.objects.create(user=user, branch=branch, created_by_id=1)
+        
+        # Generate Periods
+        for _ in range(5):  # Adjust the range as needed
+            Period.objects.create(
+                name=fake.word(),  # Or any other suitable method to generate a name
+                duration=str(fake.random_int(min=1, max=12)),  # Example: '6'
+                duration_unit=random.choice(['months', 'years', 'days','weeks']),  # Assuming these are valid units
+                description=fake.text()
+            )
 
         self.stdout.write(self.style.SUCCESS('Fake data populated successfully for Branch, BranchAssets, and User'))
