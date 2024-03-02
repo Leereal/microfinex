@@ -3,7 +3,9 @@
 from django.core.management.base import BaseCommand
 from apps.branch_assets.models import BranchAssets
 from apps.branches.models import Branch
+from apps.currencies.models import Currency
 from apps.periods.models import Period
+from apps.products.models import Product
 from apps.users.models import User, UserBranch
 from faker import Faker
 import random
@@ -61,12 +63,68 @@ class Command(BaseCommand):
                 UserBranch.objects.create(user=user, branch=branch, created_by_id=1)
         
         # Generate Periods
-        for _ in range(5):  # Adjust the range as needed
+        # Customized names and their corresponding duration units
+        period_details = [
+            {"name": "Weekly", "units": ["weeks"]},
+            {"name": "Monthly", "units": ["months"]},
+            {"name": "Daily", "units": ["days"]},
+            {"name": "Yearly", "units": ["years"]},
+            {"name": "Quarterly", "units": ["months"]}
+        ]
+
+        for period_detail in period_details:
+            # Select a name and its valid units
+            name = period_detail["name"]
+            valid_units = period_detail["units"]
+            
+            # Ensure the duration matches the unit for names with specific time frames
+            if name == "Quarterly":
+                # Assuming quarterly means 3 months duration
+                duration = 3
+                duration_unit = "months"
+            elif name == "Yearly":
+                duration = 1
+                duration_unit = "years"
+            else:
+                # For other types, you can randomize within a sensible range if needed
+                duration = fake.random_int(min=1, max=4)
+                duration_unit = random.choice(valid_units)
+
             Period.objects.create(
-                name=fake.word(),  # Or any other suitable method to generate a name
-                duration=str(fake.random_int(min=1, max=12)),  # Example: '6'
-                duration_unit=random.choice(['months', 'years', 'days','weeks']),  # Assuming these are valid units
+                name=name,
+                duration=str(duration),
+                duration_unit=duration_unit,
                 description=fake.text()
             )
+
+        # Generate Products
+        # Predefined product names
+        product_names = ["SSB", "Paynet", "Loan Term", "Collateral Based"]
+
+        # Generate Products with predefined names
+        for name in product_names:
+            Product.objects.create(
+                name=name,
+                is_active=fake.boolean(chance_of_getting_true=75)  # 75% chance to be active
+            )
+        
+
+        # Generate Specific Currencies
+        currencies = [
+            {"name": "US Dollar", "code": "USD", "symbol": "$", "position": "before"},
+            {"name": "Zim Dollar", "code": "ZWL", "symbol": "Z$", "position": "before"},
+            {"name": "SA Rand", "code": "ZAR", "symbol": "R", "position": "before"},
+            {"name": "Botswana Pula", "code": "BWP", "symbol": "P", "position": "before"},
+        ]
+
+        for currency in currencies:
+            Currency.objects.create(
+                name=currency["name"],
+                code=currency["code"],
+                symbol=currency["symbol"],
+                position=currency["position"],
+                is_active=True
+            )
+
 
         self.stdout.write(self.style.SUCCESS('Fake data populated successfully for Branch, BranchAssets, and User'))

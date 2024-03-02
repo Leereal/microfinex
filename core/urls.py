@@ -37,6 +37,7 @@ urlpatterns = [
     path("api/v1/users/", include("apps.users.urls")),
     # path("api/v1/", include("apps.loan_applications.urls")),
     path("api/v1/periods/", include("apps.periods.urls")),
+    path("api/v1/products/", include("apps.products.urls")),
 
 ]
 
