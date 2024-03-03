@@ -6,6 +6,7 @@ from apps.branch_assets.models import BranchAssets
 from apps.branch_product.models import BranchProduct
 from apps.branches.models import Branch
 from apps.currencies.models import Currency
+from apps.groups.models import Group
 from apps.periods.models import Period
 from apps.products.models import Product
 from apps.users.models import User, UserBranch
@@ -146,7 +147,34 @@ class Command(BaseCommand):
                 max_period=fake.random_int(min=13, max=24),            
                 created_by=random.choice(users)
             )
+        
+        #Generate Groups
+         # Predefined group names
+        group_names = [
+            "Zesa", "ZNA", "Unki", "Mimosa", "Zim Teachers",
+            "Bata", "Ok Supermarket", "TM Supermarket", "Chicken Feeder Crew"
+        ]
 
+        # Fetch all branches and a user to set as 'created_by'
+        branches = list(Branch.objects.all())
+        users = list(User.objects.all())
 
+        for name in group_names:
+            # Randomly assign a branch or None (to simulate groups without a branch)
+            branch = random.choice(branches + [None])  # Adding None to the list
+
+            group, created = Group.objects.get_or_create(
+                name=name,
+                defaults={
+                    'description': fake.text(),
+                    'leader': fake.name(),
+                    'email': fake.email(),
+                    'phone': fake.phone_number(),
+                    'is_active': True,
+                    'branch': branch,
+                    'created_by': random.choice(users),
+                    'status': Group.Status.ACTIVE if fake.boolean(chance_of_getting_true=75) else Group.Status.INACTIVE,
+                }
+            )
 
         self.stdout.write(self.style.SUCCESS('Fake data populated successfully for Branch, BranchAssets, and User'))
