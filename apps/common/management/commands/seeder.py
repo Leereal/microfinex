@@ -1,7 +1,9 @@
 # myapp/management/commands/seeder.py
 
+from decimal import Decimal
 from django.core.management.base import BaseCommand
 from apps.branch_assets.models import BranchAssets
+from apps.branch_product.models import BranchProduct
 from apps.branches.models import Branch
 from apps.currencies.models import Currency
 from apps.periods.models import Period
@@ -125,6 +127,26 @@ class Command(BaseCommand):
                 position=currency["position"],
                 is_active=True
             )
+        
+        # Generate BranchProducts
+        branches = list(Branch.objects.all())
+        products = list(Product.objects.all())
+        periods = list(Period.objects.all())
+        users = list(User.objects.all())
+
+        for _ in range(10):  # Adjust the number of BranchProducts to generate as needed
+            branch_product = BranchProduct.objects.create(
+                branch=random.choice(branches),
+                product=random.choice(products),
+                interest=Decimal(fake.random_number(digits=2) + fake.random_number(digits=2) / 100),
+                max_amount=Decimal(fake.random_number(digits=5)),
+                min_amount=Decimal(fake.random_number(digits=3)),
+                period=random.choice(periods),
+                min_period=fake.random_int(min=1, max=12),
+                max_period=fake.random_int(min=13, max=24),            
+                created_by=random.choice(users)
+            )
+
 
 
         self.stdout.write(self.style.SUCCESS('Fake data populated successfully for Branch, BranchAssets, and User'))

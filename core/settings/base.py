@@ -48,6 +48,7 @@ LOCAL_APPS = [
     "apps.branch_assets",   
     "apps.periods",  
     "apps.products",
+    "apps.branch_products",
     # "apps.next_of_kins",
     # "apps.loan_applications",    
     # "apps.documents",
