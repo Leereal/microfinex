@@ -1,12 +1,16 @@
 from rest_framework import serializers
-from .models import BranchProduct
+from django.contrib.auth import get_user_model
 
-class BranchProductSerializer(serializers.ModelSerializer):
+from apps.group_product.models import GroupProduct
+
+User = get_user_model()
+
+class GroupProductSerializer(serializers.ModelSerializer):
     class Meta:
-        model = BranchProduct
+        model = GroupProduct
         fields = [
             'id',
-            'branch',
+            'group',
             'product',
             'interest',
             'max_amount',
@@ -22,17 +26,13 @@ class BranchProductSerializer(serializers.ModelSerializer):
 
     def to_representation(self, instance):
         representation = super().to_representation(instance)
-        representation['branch'] = {
-            'id': instance.branch.id,
-            'name': instance.branch.name
+        representation['group'] = {
+            'id': instance.group.id,
+            'name': instance.group.name
         }
         representation['product'] = {
             'id': instance.product.id,
             'name': instance.product.name
-        }
-        representation['created_by'] = {
-            'id': instance.created_by.id,
-            'full_name': instance.created_by.get_full_name
         }
         representation['period'] = {
             'id': instance.period.id,
@@ -40,4 +40,8 @@ class BranchProductSerializer(serializers.ModelSerializer):
             'duration': instance.period.duration,
             'duration_unit': instance.period.duration_unit
         }
+        representation['created_by'] = {
+            'id': instance.created_by.id,
+            'full_name': instance.created_by.get_full_name
+        } if instance.created_by else None
         return representation

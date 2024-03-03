@@ -2,6 +2,8 @@ from rest_framework import generics
 from .models import BranchProduct
 from .serializers import BranchProductSerializer
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
+from django.db.models import Q
+
 
 class AllBranchProductListView(generics.ListAPIView):
     queryset = BranchProduct.objects.all()
@@ -18,7 +20,7 @@ class BranchProductListCreateView(generics.ListCreateAPIView):
         for the currently authenticated user's active branch.
         """
         user = self.request.user
-        return BranchProduct.objects.filter(branch=user.active_branch)
+        return BranchProduct.objects.filter(Q(branch=user.active_branch) | Q(branch__isnull=True))
 
 class BranchProductDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = BranchProductSerializer
@@ -30,5 +32,6 @@ class BranchProductDetailView(generics.RetrieveUpdateDestroyAPIView):
         based on the currently authenticated user's active branch.
         """
         user = self.request.user
-        return BranchProduct.objects.filter(branch=user.active_branch)
+        return BranchProduct.objects.filter(Q(branch=user.active_branch) | Q(branch__isnull=True))
+
 

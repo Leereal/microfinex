@@ -6,6 +6,7 @@ from apps.branch_assets.models import BranchAssets
 from apps.branch_product.models import BranchProduct
 from apps.branches.models import Branch
 from apps.currencies.models import Currency
+from apps.group_product.models import GroupProduct
 from apps.groups.models import Group
 from apps.periods.models import Period
 from apps.products.models import Product
@@ -175,6 +176,25 @@ class Command(BaseCommand):
                     'created_by': random.choice(users),
                     'status': Group.Status.ACTIVE if fake.boolean(chance_of_getting_true=75) else Group.Status.INACTIVE,
                 }
+            )
+        
+        #Generate group products
+        groups = list(Group.objects.all())
+        products = list(Product.objects.all())
+        periods = list(Period.objects.all())
+        users = list(User.objects.all())
+
+        for _ in range(10):  # Adjust the number of GroupProducts to generate as needed
+            group_product = GroupProduct.objects.create(
+                group=random.choice(groups),
+                product=random.choice(products),
+                interest=Decimal(f"{random.randint(1, 15)}.{random.randint(0, 99)}"),
+                max_amount=Decimal(fake.random_number(digits=5)),
+                min_amount=Decimal(fake.random_number(digits=3)),
+                period=random.choice(periods),
+                min_period=fake.random_int(min=1, max=12),
+                max_period=fake.random_int(min=13, max=24),
+                created_by=random.choice(users)
             )
 
         self.stdout.write(self.style.SUCCESS('Fake data populated successfully for Branch, BranchAssets, and User'))

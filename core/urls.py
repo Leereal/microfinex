@@ -40,6 +40,7 @@ urlpatterns = [
     path("api/v1/products/", include("apps.products.urls")),
     path("api/v1/branch-products/", include("apps.branch_products.urls")),
     path("api/v1/groups/", include("apps.groups.urls")),
+    path("api/v1/group-products/", include("apps.group_product.urls")),
 
 ]
 

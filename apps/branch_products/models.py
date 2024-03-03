@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from apps.audits.auditing import AuditableMixin
 from apps.branches.models import Branch
 from apps.common.models import TimeStampedModel
 from django.contrib.auth import get_user_model
@@ -8,7 +9,7 @@ from apps.products.models import Product
 
 User = get_user_model()
 
-class BranchProduct(TimeStampedModel):
+class BranchProduct(AuditableMixin,TimeStampedModel):
     branch = models.ForeignKey(
         Branch, 
         on_delete=models.CASCADE, 
@@ -54,3 +55,7 @@ class BranchProduct(TimeStampedModel):
     class Meta:
         verbose_name = _("branch product")
         verbose_name_plural = _("branch products")
+
+    def get_audit_fields(self):
+        # Dynamically retrieve all field names from the model
+        return [field.name for field in self._meta.fields]
