@@ -12,6 +12,7 @@ class AllClientsListView(generics.ListAPIView):
     permission_classes = [IsAuthenticated, IsAdminUser]
 
 class ClientListCreateView(generics.ListCreateAPIView):
+    queryset = Client.objects.all()
     serializer_class = ClientSerializer
     permission_classes = [IsAuthenticated, IsAdminUser]
 
@@ -26,6 +27,7 @@ class ClientListCreateView(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         ip_address = self.request.META.get('REMOTE_ADDR')
         user_agent = self.request.META.get('HTTP_USER_AGENT', '')
+        print("IP Address: ", ip_address)
         serializer.save(created_by=self.request.user, branch=self.request.user.active_branch, ip_address=ip_address, device_details=user_agent)
 
 class ClientDetailView(generics.RetrieveUpdateDestroyAPIView):
@@ -39,6 +41,7 @@ class ClientDetailView(generics.RetrieveUpdateDestroyAPIView):
         """
         user = self.request.user
         return Client.objects.filter(branch=user.active_branch)
+    
 
 class AllContactsListView(generics.ListAPIView):
     queryset = Contact.objects.all()

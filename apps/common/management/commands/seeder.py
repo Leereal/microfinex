@@ -5,8 +5,9 @@ from django.core.management.base import BaseCommand
 from apps.branch_assets.models import BranchAssets
 from apps.branch_products.models import BranchProduct
 from apps.branches.models import Branch
-from apps.clients.models import Client
+from apps.clients.models import Client, ClientLimit, Contact, NextOfKin
 from apps.currencies.models import Currency
+from apps.employers.models import Employer
 from apps.group_product.models import GroupProduct
 from apps.groups.models import Group
 from apps.periods.models import Period
@@ -226,6 +227,43 @@ class Command(BaseCommand):
                     whatsapp=fake.boolean(),
                     # Fill in other fields as needed...
                 )
+            
+               # Generate NextOfKin for the client
+                NextOfKin.objects.create(
+                    client=client,
+                    first_name=fake.first_name(),
+                    last_name=fake.last_name(),
+                    email=fake.email(),
+                    phone=fake.phone_number(),
+                    relationship=random.choice(['Sibling', 'Parent', 'Child', 'Friend', 'Spouse']),
+                    address=fake.address(),
+                    created_by=random.choice(users),
+                    is_active=True
+                )
 
+                # Generate an Employer for the client (assuming a client can have an employer)
+                # Note: Adjust field values as necessary based on your model definitions
+                if fake.boolean(chance_of_getting_true=100):  # 50% chance to have an employer
+                    Employer.objects.create(
+                        client=client,
+                        contact_person=fake.name(),
+                        email=fake.email(),
+                        phone=fake.phone_number(),
+                        name=fake.company(),
+                        address=fake.address(),
+                        employment_date=fake.past_date(start_date="-5y", tzinfo=None),
+                        job_title=fake.job(),
+                        created_by=random.choice(users),
+                        is_active=True
+                    )
+                    
+                # Generate ClientLimits for the client
+                currency = Currency.objects.order_by('?').first()
+                ClientLimit.objects.create(
+                    client=client,
+                    max_loan=fake.random_number(digits=6, fix_len=True),  # Generate a random max loan value
+                    credit_score=fake.random_int(min=300, max=850),  # Example range for credit scores
+                    currency=currency
+                )
 
         self.stdout.write(self.style.SUCCESS('Fake data populated successfully for Branch, BranchAssets, and User'))

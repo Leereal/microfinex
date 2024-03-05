@@ -41,6 +41,7 @@ urlpatterns = [
     path("api/v1/groups/", include("apps.groups.urls")),
     path("api/v1/group-products/", include("apps.group_product.urls")),
     path("api/v1/", include("apps.clients.urls")),
+    path("api/v1/employers/",include("apps.employers.urls"))
 ]
 
 admin.site.site_header = "Microfinex Pro Admin"

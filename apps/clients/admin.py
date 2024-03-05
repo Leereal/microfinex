@@ -1,35 +1,40 @@
 from django.contrib import admin
 from django.forms.models import BaseInlineFormSet
 from django.utils.translation import gettext_lazy as _
-from .models import Client, Contact, NextOfKin
 
-# class NextOfKinInlineFormSet(BaseInlineFormSet):
-#     def save_new(self, form, commit=True):
-#         # Custom logic to ensure one-to-one relationship is maintained
-#         return super().save_new(form, commit=commit)
+from apps.employers.models import Employer
+from .models import Client, ClientLimit, Contact, NextOfKin
 
-#     def save_existing(self, form, instance, commit=True):
-#         # Custom logic for updating the existing instance
-#         return super().save_existing(form, instance, commit=commit)
-
-# class NextOfKinInline(admin.StackedInline):
-#     model = NextOfKin
-#     formset = NextOfKinInlineFormSet
-#     can_delete = False  # Optional: if you want to prevent deletion of NextOfKin from Client admin
-#     verbose_name_plural = 'Next of Kin'  # Adjust the text to fit your needs
-
+class NextOfKinInline(admin.TabularInline):
+    model = NextOfKin  
+    extra = 1
+    fields = ('first_name', 'last_name', 'email', 'phone', 'relationship', 'address', 'created_by', 'is_active')
+    readonly_fields = ('created_at', 'last_modified')
 
 class ContactInline(admin.TabularInline):
     model = Contact
     extra = 1  # Number of empty forms to display
     fields = ('type', 'phone', 'is_primary', 'is_active', 'whatsapp')
 
+class EmployerInline(admin.TabularInline):
+    model = Employer
+    extra = 1  # Number of empty forms to display
+    fields = ('contact_person', 'email', 'phone', 'name', 'address', 'employment_date', 'job_title', 'created_by', 'is_active')
+    readonly_fields = ('created_at', 'last_modified')
+
+
+class ClientLimitInline(admin.TabularInline):
+    model = ClientLimit  
+    extra = 1
+    fields = ('max_loan', 'credit_score')
+    readonly_fields = ('created_at', 'last_modified')
+
 @admin.register(Client)
 class ClientAdmin(admin.ModelAdmin):
-    list_display = ('get_full_name','first_name', 'last_name', 'national_id', 'nationality', 'status', 'get_age')
+    list_display = ('get_full_name', 'first_name', 'last_name', 'national_id', 'nationality', 'status', 'get_age')
     list_filter = ('status', 'nationality', 'gender', 'branch')
     search_fields = ('first_name', 'last_name', 'national_id', 'emails', 'passport_number')
-    inlines = [ContactInline]
+    inlines = [ContactInline, EmployerInline, NextOfKinInline, ClientLimitInline]  # Add EmployerInline here
     fieldsets = (
         (_('Personal Info'), {'fields': ('first_name', 'last_name', 'emails', 'national_id', 'nationality', 'passport_number', 'passport_country', 'photo', 'date_of_birth', 'title', 'gender')}),
         (_('Address'), {'fields': ('street_number', 'suburb', 'zip_code', 'city', 'state', 'country')}),
@@ -39,7 +44,7 @@ class ClientAdmin(admin.ModelAdmin):
     )
     
     def get_form(self, request, obj=None, **kwargs):
-        form = super(ClientAdmin, self).get_form(request, obj, **kwargs)
+        form = super().get_form(request, obj, **kwargs)
         form.base_fields['created_by'].initial = request.user.id
         return form
 

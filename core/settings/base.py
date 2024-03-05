@@ -52,6 +52,8 @@ LOCAL_APPS = [
     "apps.groups",
     "apps.group_product",
     "apps.clients",
+    "apps.employers",
+    
     # "apps.loan_applications",    
     # "apps.documents",
     # "apps.smses",

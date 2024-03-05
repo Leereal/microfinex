@@ -1,4 +1,5 @@
 from datetime import datetime
+from http import client
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.utils.translation import gettext_lazy as _
@@ -9,27 +10,10 @@ from django_countries.fields import CountryField
 
 from apps.common.models import TimeStampedModel
 from apps.branches.models import Branch
+from apps.currencies.models import Currency
 # from apps.next_of_kins.models import NextOfKin
 
 User = get_user_model()
-
-class NextOfKin(TimeStampedModel):
-    first_name = models.CharField(_('First Name'), max_length=50)
-    last_name = models.CharField(_('Last Name'), max_length=50)
-    email = models.EmailField(_('Email'),blank=True,null=True)
-    phone = PhoneNumberField(_('Phone Number'), blank=True,null=True)
-    relationship = models.CharField(_('Relationship'), max_length=255, blank=True, null=True)
-    address = models.TextField(_('Address'), blank=True, null=True)
-    created_by = models.ForeignKey(User, verbose_name=_('Created By'), on_delete=models.SET_NULL, blank=True, null=True)
-    is_active = models.BooleanField(_('Is Active'), default=True)
-
-    class Meta:
-        verbose_name = _('Next of Kin')
-        verbose_name_plural = _('Next of Kin')
-
-    def __str__(self):
-        return f"{self.first_name} {self.last_name} (Relationship: {self.relationship})"
-
 
 class Client(AuditableMixin,TimeStampedModel):
     class Gender(models.TextChoices):
@@ -77,7 +61,6 @@ class Client(AuditableMixin,TimeStampedModel):
     state = models.CharField(_('State / Province'), max_length=255, blank=True, null=True)
     country = models.CharField(verbose_name=_("country"),max_length=200, blank=True,  null=True, choices=CountryField().choices + [('', 'Select Country')])
     guarantor = models.CharField(_('Guarantor'), max_length=255, blank=True, null=True)
-    next_of_kin = models.OneToOneField(NextOfKin, verbose_name=_('Next of Kin'), on_delete=models.SET_NULL, blank=True, null=True, related_name='client')
     is_guarantor = models.BooleanField(_('Is Guarantor'), default=False)
     status = models.CharField(_('Status'), max_length=20, choices=Status.choices, default=Status.ACTIVE)
     created_by = models.ForeignKey(User, verbose_name=_('Created By'), on_delete=models.SET_NULL, blank=True, null=True)
@@ -135,3 +118,32 @@ class Contact(models.Model):
     def get_audit_fields(self):
         # Dynamically retrieve all field names from the model
         return [field.name for field in self._meta.fields]
+    
+
+class NextOfKin(TimeStampedModel):
+    client = models.OneToOneField(Client, verbose_name=_('Client'), related_name='next_of_kin', on_delete=models.CASCADE)
+    first_name = models.CharField(_('First Name'), max_length=50)
+    last_name = models.CharField(_('Last Name'), max_length=50)
+    email = models.EmailField(_('Email'),blank=True,null=True)
+    phone = PhoneNumberField(_('Phone Number'), blank=True,null=True)
+    relationship = models.CharField(_('Relationship'), max_length=255, blank=True, null=True)
+    address = models.TextField(_('Address'), blank=True, null=True)
+    created_by = models.ForeignKey(User, verbose_name=_('Created By'), on_delete=models.SET_NULL, blank=True, null=True)
+    is_active = models.BooleanField(_('Is Active'), default=True)
+
+    class Meta:
+        verbose_name = _('Next of Kin')
+        verbose_name_plural = _('Next of Kin')
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name} (Relationship: {self.relationship})"
+
+
+class ClientLimit(TimeStampedModel):
+    client = models.OneToOneField(Client, on_delete=models.CASCADE, related_name="client_limit")
+    max_loan = models.DecimalField(max_digits=15, decimal_places=2)
+    credit_score = models.DecimalField(max_digits=15, decimal_places=2)
+    currency = models.ForeignKey(Currency, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"Client Limits - ID: {self.id}, Client: {self.client}"
