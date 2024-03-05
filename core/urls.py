@@ -31,8 +31,7 @@ urlpatterns = [
     path("api/v1/branches/", include("apps.branches.urls")),
     path("api/v1/currencies/", include("apps.currencies.urls")),
     path("api/v1/branch-assets/", include("apps.branch_assets.urls")),
-    path("api/v1/change-audits/", include("apps.audits.urls")),
-    # path("api/v1/clients/", include("apps.clients.urls")),
+    path("api/v1/change-audits/", include("apps.audits.urls")),    
     path("api/v1/users/<int:pk>/update/", CustomUserEditView.as_view(), name="update_user"),  # Endpoint for editing user data
     path("api/v1/users/", include("apps.users.urls")),
     # path("api/v1/", include("apps.loan_applications.urls")),
@@ -41,7 +40,7 @@ urlpatterns = [
     path("api/v1/branch-products/", include("apps.branch_products.urls")),
     path("api/v1/groups/", include("apps.groups.urls")),
     path("api/v1/group-products/", include("apps.group_product.urls")),
-
+    path("api/v1/", include("apps.clients.urls")),
 ]
 
 admin.site.site_header = "Microfinex Pro Admin"

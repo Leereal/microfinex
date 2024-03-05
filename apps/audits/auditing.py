@@ -49,14 +49,17 @@ def post_save_handler(sender, instance, created, request=None, **kwargs):
             if changes:
                 for field_name, old_value, new_value in changes:
                     # Create AuditLog instance using serializer
+                     # Ensure both old_value and new_value are converted to string
+                    old_value_str = str(old_value) if old_value is not None else None
+                    new_value_str = str(new_value) if new_value is not None else None
                     serializer = AuditLogSerializer(data={
                         'user': request.user if request and request.user.is_authenticated else None,
                         'action': action,
                         'model_name': sender.__name__,
                         'record_id': instance.pk,
                         'field_name': field_name,
-                        'old_value': old_value if old_value is not None else " ",
-                        'new_value': new_value
+                        'old_value': old_value_str,
+                        'new_value': new_value_str
                     })
                     serializer.is_valid(raise_exception=True)
                     serializer.save()

@@ -10,18 +10,28 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ("audits", "0001_initial"),
+        ("branch_assets", "0001_initial"),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
     operations = [
         migrations.AddField(
-            model_name="auditlog",
+            model_name="branchassets",
+            name="used_by",
+            field=models.ForeignKey(
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="used_assets",
+                to=settings.AUTH_USER_MODEL,
+            ),
+        ),
+        migrations.AddField(
+            model_name="branchassets",
             name="user",
             field=models.ForeignKey(
-                blank=True,
                 null=True,
                 on_delete=django.db.models.deletion.SET_NULL,
+                related_name="captured_branch_assets",
                 to=settings.AUTH_USER_MODEL,
             ),
         ),

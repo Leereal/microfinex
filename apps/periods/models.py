@@ -20,7 +20,7 @@ class Period(TimeStampedModel):
     duration_unit = models.CharField(
         max_length=10,
         choices=DurationUnits.choices,
-        default=DurationUnits.DAYS,
+        default=DurationUnits.MONTHS,
         verbose_name=_("Duration Unit"),
         help_text=_("Unit of measurement for the period's duration.")
     )

@@ -1,38 +1,70 @@
-# from django.contrib.auth import get_user_model
-# from rest_framework import generics, status
-# from rest_framework.exceptions import NotFound
-# from rest_framework.parsers import MultiPartParser
-# from rest_framework.permissions import IsAuthenticated
-# from rest_framework.response import Response
-# from rest_framework.views import APIView
-# from .permissions import IsUserFromBranch
+from rest_framework import generics
+from .models import Client, Contact
+from .serializers import ClientSerializer, ContactSerializer
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
+from django.db.models import Q
 
-# from .models import Client
-# from .renderers import ClientJSONRenderer, ClientsJSONRenderer
-# from .serializers import ClientSerializer, UpdateClientSerializer
+# Assuming ClientSerializer and ContactSerializer are defined appropriately
 
-# User = get_user_model()
+class AllClientsListView(generics.ListAPIView):
+    queryset = Client.objects.all()
+    serializer_class = ClientSerializer
+    permission_classes = [IsAuthenticated, IsAdminUser]
 
-# class ClientListAPIView(generics.ListCreateAPIView):
-#     # Get clients from database
-#     queryset = Client.objects.all()
-#     #Clean with the serializer to get the data in format that you want
-#     serializer_class = ClientSerializer
-#     # renderer_classes = [ClientsJSONRenderer] 
-#     # if we are expecting to receive files we can use Multiparser
-#     # parser_classes = (MultiPartParser)
-#     permission_classes = [IsAuthenticated,IsUserFromBranch]
+class ClientListCreateView(generics.ListCreateAPIView):
+    serializer_class = ClientSerializer
+    permission_classes = [IsAuthenticated, IsAdminUser]
 
-#     def perform_create(self, serializer):
-#         # Capture IP address and device details before saving
-#         serializer.save(created_by=self.request.user)
+    def get_queryset(self):
+        """
+        This view should return a list of all clients
+        for the currently authenticated user's active branch.
+        """
+        user = self.request.user
+        return Client.objects.filter(branch=user.active_branch)
+    
+    def perform_create(self, serializer):
+        ip_address = self.request.META.get('REMOTE_ADDR')
+        user_agent = self.request.META.get('HTTP_USER_AGENT', '')
+        serializer.save(created_by=self.request.user, branch=self.request.user.active_branch, ip_address=ip_address, device_details=user_agent)
 
-# class ClientDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
-#     queryset = Client.objects.all()
-#     serializer_class = UpdateClientSerializer
-#     renderer_classes = [ClientJSONRenderer]
-#     # permission_classes = [IsAuthenticated,IsUserFromBranch]
+class ClientDetailView(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = ClientSerializer
+    permission_classes = [IsAuthenticated, IsAdminUser]
 
-#     def perform_update(self, serializer):
-#         # Capture IP address and device details before saving
-#         serializer.save(request=self.request)
+    def get_queryset(self):
+        """
+        This view allows for retrieving, updating, or deleting a client
+        based on the currently authenticated user's active branch.
+        """
+        user = self.request.user
+        return Client.objects.filter(branch=user.active_branch)
+
+class AllContactsListView(generics.ListAPIView):
+    queryset = Contact.objects.all()
+    serializer_class = ContactSerializer
+    permission_classes = [IsAuthenticated, IsAdminUser]
+
+class ContactsListCreateView(generics.ListCreateAPIView):
+    serializer_class = ContactSerializer
+    permission_classes = [IsAuthenticated, IsAdminUser]
+
+    def get_queryset(self):
+        """
+        This view should return a list of all contacts
+        associated with clients in the currently authenticated user's active branch.
+        """
+        user = self.request.user
+        return Contact.objects.filter(client__branch=user.active_branch)
+
+class ContactDetailView(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = ClientSerializer
+    permission_classes = [IsAuthenticated, IsAdminUser]
+
+    def get_queryset(self):
+        """
+        This view allows for retrieving, updating, or deleting a client
+        based on the currently authenticated user's active branch.
+        """
+        user = self.request.user
+        return Contact.objects.filter(client__branch=user.active_branch)

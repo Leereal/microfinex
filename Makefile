@@ -63,3 +63,6 @@ flush-db:
 
 delete-db:
 	docker compose -f local.yml down -v
+
+seeder:
+	docker compose -f local.yml run --rm api python manage.py seeder

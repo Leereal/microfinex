@@ -3,8 +3,9 @@
 from decimal import Decimal
 from django.core.management.base import BaseCommand
 from apps.branch_assets.models import BranchAssets
-from apps.branch_product.models import BranchProduct
+from apps.branch_products.models import BranchProduct
 from apps.branches.models import Branch
+from apps.clients.models import Client
 from apps.currencies.models import Currency
 from apps.group_product.models import GroupProduct
 from apps.groups.models import Group
@@ -32,23 +33,6 @@ class Command(BaseCommand):
             )
 
         office_items = ['laptop', 'car', 'TV', 'chair', 'desk', 'printer', 'phone', 'monitor', 'keyboard', 'mouse']
-
-        # Generate BranchAssets
-        for branch in Branch.objects.all():
-            item = random.choice(office_items)
-            branch_asset = BranchAssets.objects.create(
-                branch=branch,
-                item=item,
-                description=fake.text(),
-                brand=fake.company(),
-                color=fake.color_name(),
-                quantity=fake.random_int(min=1, max=100),
-                user_id=1,
-                used_by_id=1,
-                purchase_date=fake.date_between(start_date="-1y", end_date="today"),
-                images=[]  # You may adjust this field based on your requirements
-            )
-
         # Generate Users
         for _ in range(20):
             email = fake.unique.email()  # Ensure unique email addresses
@@ -65,7 +49,22 @@ class Command(BaseCommand):
             branches = Branch.objects.order_by('?')[:random.randint(1, 3)]
             for branch in branches:
                 UserBranch.objects.create(user=user, branch=branch, created_by_id=1)
-        
+        # Generate BranchAssets
+        for branch in Branch.objects.all():
+            item = random.choice(office_items)
+            branch_asset = BranchAssets.objects.create(
+                branch=branch,
+                item=item,
+                description=fake.text(),
+                brand=fake.company(),
+                color=fake.color_name(),
+                quantity=fake.random_int(min=1, max=100),
+                user_id=1,
+                used_by_id=1,
+                purchase_date=fake.date_between(start_date="-1y", end_date="today"),
+                images=[]  # You may adjust this field based on your requirements
+            )
+               
         # Generate Periods
         # Customized names and their corresponding duration units
         period_details = [
@@ -196,5 +195,37 @@ class Command(BaseCommand):
                 max_period=fake.random_int(min=13, max=24),
                 created_by=random.choice(users)
             )
+
+        # Generate Clients and Contacts
+        users = list(User.objects.all())  # Assuming User model import is correct
+        branches = list(Branch.objects.all())
+
+        for _ in range(10):  # Adjust the number as needed
+            client = Client.objects.create(
+                first_name=fake.first_name(),
+                last_name=fake.last_name(),
+                emails=[fake.email(), ],  # Assuming ArrayField expects a list
+                national_id=fake.unique.ssn(),  # Or any appropriate method to generate a unique ID
+                nationality=fake.country_code(representation="alpha-2"),
+                # Fill in other fields as necessary...
+                branch=random.choice(branches + [None]),  # Random branch or None
+                created_by=random.choice(users),
+                # Ensure to convert the date properly if your Django version does not auto-handle it
+                date_of_birth=fake.date_of_birth(minimum_age=18, maximum_age=90),
+                country=fake.country_code(representation="alpha-2"),
+            )
+            
+            # Generate Contacts for the client
+            for _ in range(random.randint(1, 3)):  # Each client will have 1 to 3 contacts
+                Contact.objects.create(
+                    client=client,
+                    phone=fake.phone_number(),
+                    type=random.choice([choice[0] for choice in Contact.ContactType.choices]),
+                    is_primary=fake.boolean(),
+                    is_active=fake.boolean(),
+                    whatsapp=fake.boolean(),
+                    # Fill in other fields as needed...
+                )
+
 
         self.stdout.write(self.style.SUCCESS('Fake data populated successfully for Branch, BranchAssets, and User'))

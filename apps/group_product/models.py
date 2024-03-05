@@ -1,4 +1,5 @@
 from django.db import models
+from apps.audits.auditing import AuditableMixin
 from apps.common.models import TimeStampedModel
 from apps.periods.models import Period
 from apps.products.models import Product
@@ -8,7 +9,7 @@ from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
-class GroupProduct(TimeStampedModel):    
+class GroupProduct(AuditableMixin, TimeStampedModel):    
     group = models.ForeignKey(
         Group, 
         on_delete=models.CASCADE, 
@@ -57,3 +58,7 @@ class GroupProduct(TimeStampedModel):
     class Meta:
         verbose_name = _("group product")
         verbose_name_plural = _("group products")
+    
+    def get_audit_fields(self):
+        # Dynamically retrieve all field names from the model
+        return [field.name for field in self._meta.fields]
