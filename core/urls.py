@@ -41,7 +41,13 @@ urlpatterns = [
     path("api/v1/groups/", include("apps.groups.urls")),
     path("api/v1/group-products/", include("apps.group_product.urls")),
     path("api/v1/", include("apps.clients.urls")),
-    path("api/v1/employers/",include("apps.employers.urls"))
+    path("api/v1/employers/",include("apps.employers.urls")),
+    path("api/v1/group-product-charges/",include("apps.group_product_charge.urls")),
+    path("api/v1/branch-product-charges/",include("apps.branch_product_charge.urls")),
+    path("api/v1/payment-gateways/",include("apps.payment_gateways.urls")),
+    path("api/v1/finance/",include("apps.finance.urls")),
+    path("api/v1/charges/",include("apps.charges.urls")),
+    path("api/v1/loan-statuses/",include("apps.loan_statuses.urls")),
 ]
 
 admin.site.site_header = "Microfinex Pro Admin"
