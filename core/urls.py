@@ -34,7 +34,7 @@ urlpatterns = [
     path("api/v1/change-audits/", include("apps.audits.urls")),    
     path("api/v1/users/<int:pk>/update/", CustomUserEditView.as_view(), name="update_user"),  # Endpoint for editing user data
     path("api/v1/users/", include("apps.users.urls")),
-    # path("api/v1/", include("apps.loan_applications.urls")),
+    path("api/v1/", include("apps.loan_applications.urls")),
     path("api/v1/periods/", include("apps.periods.urls")),
     path("api/v1/products/", include("apps.products.urls")),
     path("api/v1/branch-products/", include("apps.branch_products.urls")),

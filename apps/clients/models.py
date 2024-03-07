@@ -11,7 +11,6 @@ from django_countries.fields import CountryField
 from apps.common.models import TimeStampedModel
 from apps.branches.models import Branch
 from apps.currencies.models import Currency
-# from apps.next_of_kins.models import NextOfKin
 
 User = get_user_model()
 

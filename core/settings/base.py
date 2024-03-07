@@ -58,8 +58,8 @@ LOCAL_APPS = [
     "apps.group_product_charge",
     "apps.branch_product_charge",
     "apps.payment_gateways",
-    "apps.finance"
-    # "apps.loan_applications",    
+    "apps.finance",
+    "apps.loan_applications",
     # "apps.documents",
     # "apps.smses",
     # "apps.emails",
