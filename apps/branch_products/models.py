@@ -42,6 +42,8 @@ class BranchProduct(AuditableMixin,TimeStampedModel):
     )
     min_period = models.IntegerField(verbose_name=_("minimum period"))
     max_period = models.IntegerField(verbose_name=_("maximum period"))
+    grace_period_days = models.IntegerField(verbose_name=_("grace period in days"), default=0)
+    allow_half_period = models.BooleanField(default=False, verbose_name=_("allow half period"))
     is_active = models.BooleanField(default=True, verbose_name=_("is active"))
     created_by = models.ForeignKey(
         User, 

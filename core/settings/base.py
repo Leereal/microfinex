@@ -60,12 +60,14 @@ LOCAL_APPS = [
     "apps.payment_gateways",
     "apps.finance",
     "apps.loan_applications",
+    "apps.global_settings",
+    "apps.branch_settings",
     # "apps.documents",
     # "apps.smses",
     # "apps.emails",
     # "apps.notifications",
-    # "apps.loans",
-    # "apps.loan_transactions"
+    "apps.loans",
+    "apps.loan_transactions"
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 MIDDLEWARE = [

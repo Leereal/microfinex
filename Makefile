@@ -66,3 +66,6 @@ delete-db:
 
 seeder:
 	docker compose -f local.yml run --rm api python manage.py seeder
+
+cron:
+	docker compose -f local.yml run --rm api python manage.py cron

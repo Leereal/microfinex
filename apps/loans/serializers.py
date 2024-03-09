@@ -1,53 +1,59 @@
 from rest_framework import serializers
-
+from django.db.models import Q
+from apps.clients.models import Client
 from apps.branches.models import Branch
-from .models import Loan
+from apps.loans.models import Loan
+from apps.global_settings.models import GlobalSettings
+from apps.branch_settings.models import BranchSettings
 
 class LoanSerializer(serializers.ModelSerializer):
-    # branch = serializers.PrimaryKeyRelatedField(queryset=Branch.objects.all())
-    # client = serializers.PrimaryKeyRelatedField(queryset=Client.objects.all())
-    client_full_name = serializers.ReadOnlyField()
+    client_full_name = serializers.SerializerMethodField()
     branch_name = serializers.CharField(source="branch.name", read_only=True)
-
-    # I want to see if the property decorator makes this work
-    loan_created_by = serializers.CharField(source="user.full_name", read_only=True )
-    loan_approved_by = serializers.CharField(source="user.full_name", read_only=True )
-
-    def get_client_full_name(self,obj):
-        return obj.full_name()
-
+    loan_created_by = serializers.CharField(source="created_by.get_full_name", read_only=True)
+    loan_approved_by = serializers.CharField(source="approved_by.get_full_name", read_only=True)
 
     class Meta:
         model = Loan
-        fields = ["client_full_name","branch_name","loan_created_by","loan_approved_by","amount"]
+        fields = [
+            "id", "client", "client_full_name", "branch", "branch_name",
+            "created_by", "loan_created_by", "approved_by", "loan_approved_by",
+            "amount", "interest_rate", "interest_amount", "currency",
+            "loan_application", "disbursement_date", "repayment_date",
+            "status", "branch_product", "group_product"
+        ]
 
-   
-    # def amount_validator(self, amount):
-    #     #amount must be more than branch minimum allowed
-    #     if amount < 10:
-    #             raise serializers.ValidationError("Amount must be greater than 100000")
-        
-    #     #amount must be less than branch maximum allowed
-    #     #amount must be less than or equal client limit after calculating current loan plus previous loan
-    
-    # def branch_validator(self, branch):
-    #     #branch must be active
-    #     if branch.is_active == False:
-    #         raise serializers.ValidationError("Branch is not active")
-        
-       
-        
-    def client_validator(self, client):         
-         #client must be active
-        if client.is_active == False:
-            raise serializers.ValidationError("Client is not active")
-        
-        #Give loan only to allowed clients
-        if client.status is not "Active":
-             raise serializers.ValidationError("Client is not allowed to get loan at the moment")
-        
-        if client.branch != branch:
-             raise serializers.ValidationError("Client is not from this branch")
+    def get_client_full_name(self, obj):
+        return obj.client.get_full_name()
 
+    def validate_amount(self, value):
+        # Fetch global settings; assuming there's only one instance
+        global_settings = GlobalSettings.objects.first()
+        # Determine if the loan is tied to a branch to fetch branch-specific settings
+        branch_settings = BranchSettings.objects.filter(branch=self.context.get('request').user.branch).first() if self.context.get('request') else None
 
-           
+        min_amount = branch_settings.min_loan_amount if branch_settings else global_settings.min_loan_amount
+        max_amount = branch_settings.max_loan_amount if branch_settings else global_settings.max_loan_amount
+
+        if not (min_amount <= value <= max_amount):
+            raise serializers.ValidationError(f"Amount must be between {min_amount} and {max_amount}.")
+
+        return value
+
+    def validate(self, attrs):
+        client = attrs.get('client')
+        branch = attrs.get('branch')
+
+        # Client validations
+        if not client.is_active:
+            raise serializers.ValidationError({"client": "Client is not active."})
+
+        if client.status != Client.Status.ACTIVE:
+            raise serializers.ValidationError({"client": "Client is not allowed to get a loan at the moment."})
+
+        # Ensure the client belongs to the same branch as the loan, if applicable
+        if branch and client.branch != branch:
+            raise serializers.ValidationError({"client": "Client is not from this branch."})
+
+        # Additional validations can be added here as needed
+        
+        return attrs

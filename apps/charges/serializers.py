@@ -6,7 +6,7 @@ class ChargeSerializer(serializers.ModelSerializer):
         model = Charge
         fields = [
             'id', 'name', 'description', 'amount', 'amount_type', 'charge_type',
-            'charge_application', 'loan_status', 'frequency', 'mode', 'is_active',
+            'charge_application', 'loan_status', 'mode', 'is_active',
         ]
 
     def validate_amount(self, value):

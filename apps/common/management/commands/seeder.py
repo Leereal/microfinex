@@ -274,9 +274,9 @@ class Command(BaseCommand):
             )
 
         # Seed LoanStatuses with specific rules for auto calculations
-        loan_status_names = ['Active', 'Cancelled', 'Defaulted', 'Overdue', 'Legal', 'Bad Debt', 'Closed']
+        loan_status_names = ['Pending','Approved','Active','Default', 'Overdue', 'Legal', 'Bad Debt', 'Closed','Cancelled','Failed']
         for name in loan_status_names:
-            allow_auto_calculations = True if name in ['Active', 'Defaulted'] else False
+            allow_auto_calculations = True if name in ['Active', 'Default'] else False
             LoanStatus.objects.get_or_create(
                 name=name,
                 defaults={
@@ -288,16 +288,18 @@ class Command(BaseCommand):
 
         # Generate Specific Charges
         charge_details = [
-            {"name": "Processing Fee", "amount_type": "fixed", "charge_type": "debit", "charge_application": "principal", "frequency": "one-time", "mode": "auto"},
-            {"name": "Interest", "amount_type": "percentage", "charge_type": "debit", "charge_application": "balance", "frequency": "recurring", "mode": "auto"},
-            {"name": "Late Payment Fee", "amount_type": "fixed", "charge_type": "debit", "charge_application": "other", "frequency": "one-time", "mode": "manual"},
-            {"name": "Origination Fee", "amount_type": "percentage", "charge_type": "debit", "charge_application": "principal", "frequency": "one-time", "mode": "auto"},
-            {"name": "Service Charge", "amount_type": "fixed", "charge_type": "debit", "charge_application": "principal", "frequency": "recurring", "mode": "auto"},
-            {"name": "Prepayment Penalty", "amount_type": "percentage", "charge_type": "debit", "charge_application": "balance", "frequency": "one-time", "mode": "manual"},
-            {"name": "Inspection Fee", "amount_type": "fixed", "charge_type": "debit", "charge_application": "other", "frequency": "one-time", "mode": "manual"},
-            {"name": "Legal Fee", "amount_type": "fixed", "charge_type": "debit", "charge_application": "other", "frequency": "one-time", "mode": "manual"},
-            {"name": "Insurance", "amount_type": "fixed", "charge_type": "debit", "charge_application": "principal", "frequency": "recurring", "mode": "auto"},
-            {"name": "Annual Maintenance Fee", "amount_type": "fixed", "charge_type": "debit", "charge_application": "principal", "frequency": "recurring", "mode": "auto"},
+            {"name": "Admin Fee Payment", "amount_type": "percentage", "charge_type": "credit", "charge_application": "principal", "mode": "auto"},
+             {"name": "Admin Fee", "amount_type": "percentage", "charge_type": "debit", "charge_application": "principal", "mode": "auto"},
+            {"name": "Processing Fee", "amount_type": "fixed", "charge_type": "debit", "charge_application": "principal", "mode": "auto"},
+            {"name": "Interest", "amount_type": "percentage", "charge_type": "debit", "charge_application": "balance",  "mode": "auto"},
+            {"name": "Late Payment Fee", "amount_type": "fixed", "charge_type": "debit", "charge_application": "other", "mode": "manual"},
+            {"name": "Origination Fee", "amount_type": "percentage", "charge_type": "debit", "charge_application": "principal", "mode": "auto"},
+            {"name": "Service Charge", "amount_type": "fixed", "charge_type": "debit", "charge_application": "principal",  "mode": "auto"},
+            {"name": "Prepayment Penalty", "amount_type": "percentage", "charge_type": "debit", "charge_application": "balance","mode": "manual"},
+            {"name": "Inspection Fee", "amount_type": "fixed", "charge_type": "debit", "charge_application": "other","mode": "manual"},
+            {"name": "Legal Fee", "amount_type": "fixed", "charge_type": "debit", "charge_application": "other", "mode": "manual"},
+            {"name": "Insurance", "amount_type": "fixed", "charge_type": "debit", "charge_application": "principal","mode": "auto"},
+            {"name": "Annual Maintenance Fee", "amount_type": "fixed", "charge_type": "debit", "charge_application": "principal", "mode": "auto"},
         ]
 
         for charge_detail in charge_details:
