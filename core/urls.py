@@ -48,6 +48,8 @@ urlpatterns = [
     path("api/v1/finance/",include("apps.finance.urls")),
     path("api/v1/charges/",include("apps.charges.urls")),
     path("api/v1/loan-statuses/",include("apps.loan_statuses.urls")),
+    path("api/v1/loans/",include("apps.loans.urls")),
+    path("api/v1/loan-transactions/",include("apps.loan_transactions.urls")),
 ]
 
 admin.site.site_header = "Microfinex Pro Admin"

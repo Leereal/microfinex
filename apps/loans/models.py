@@ -116,7 +116,8 @@ class Loan(TimeStampedModel, AuditableMixin):
         LoanStatus, 
         on_delete=models.CASCADE,
         verbose_name='Status',
-        help_text='The current status of the loan.'
+        help_text='The current status of the loan.',
+        default=LoanStatus.objects.get(name='Pending').id                
     )
     branch = models.ForeignKey(
         Branch, 

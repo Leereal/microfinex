@@ -1,16 +1,16 @@
 from rest_framework import serializers
-from django.db.models import Q
-from apps.clients.models import Client
-from apps.branches.models import Branch
+from apps.loan_transactions.serializers import LoanTransactionSerializer
 from apps.loans.models import Loan
-from apps.global_settings.models import GlobalSettings
-from apps.branch_settings.models import BranchSettings
+from apps.loans.validation import validate_client, validate_loan_amount
+
 
 class LoanSerializer(serializers.ModelSerializer):
     client_full_name = serializers.SerializerMethodField()
     branch_name = serializers.CharField(source="branch.name", read_only=True)
     loan_created_by = serializers.CharField(source="created_by.get_full_name", read_only=True)
     loan_approved_by = serializers.CharField(source="approved_by.get_full_name", read_only=True)
+    transactions = LoanTransactionSerializer(many=True, source="loan_transactions", read_only=True) 
+    product_name = serializers.SerializerMethodField()
 
     class Meta:
         model = Loan
@@ -18,42 +18,23 @@ class LoanSerializer(serializers.ModelSerializer):
             "id", "client", "client_full_name", "branch", "branch_name",
             "created_by", "loan_created_by", "approved_by", "loan_approved_by",
             "amount", "interest_rate", "interest_amount", "currency",
-            "loan_application", "disbursement_date", "repayment_date",
-            "status", "branch_product", "group_product"
+            "loan_application", "disbursement_date", "start_date", "expected_repayment_date",  # Updated
+            "status",'product_name', "branch_product", "group_product","transactions"
         ]
+        read_only_fields = ["branch_name", "loan_created_by", "loan_approved_by", "created_by", "branch","transactions"]
+
+    def get_product_name(self,obj):
+        if obj.group_product:
+            return obj.group_product.product.name
+        else:
+            return obj.branch_product.product.name
 
     def get_client_full_name(self, obj):
         return obj.client.get_full_name()
 
     def validate_amount(self, value):
-        # Fetch global settings; assuming there's only one instance
-        global_settings = GlobalSettings.objects.first()
-        # Determine if the loan is tied to a branch to fetch branch-specific settings
-        branch_settings = BranchSettings.objects.filter(branch=self.context.get('request').user.branch).first() if self.context.get('request') else None
-
-        min_amount = branch_settings.min_loan_amount if branch_settings else global_settings.min_loan_amount
-        max_amount = branch_settings.max_loan_amount if branch_settings else global_settings.max_loan_amount
-
-        if not (min_amount <= value <= max_amount):
-            raise serializers.ValidationError(f"Amount must be between {min_amount} and {max_amount}.")
-
-        return value
+        return validate_loan_amount(value, self.initial_data.get('client'), self.context)
 
     def validate(self, attrs):
-        client = attrs.get('client')
-        branch = attrs.get('branch')
-
-        # Client validations
-        if not client.is_active:
-            raise serializers.ValidationError({"client": "Client is not active."})
-
-        if client.status != Client.Status.ACTIVE:
-            raise serializers.ValidationError({"client": "Client is not allowed to get a loan at the moment."})
-
-        # Ensure the client belongs to the same branch as the loan, if applicable
-        if branch and client.branch != branch:
-            raise serializers.ValidationError({"client": "Client is not from this branch."})
-
-        # Additional validations can be added here as needed
-        
+        validate_client(attrs.get('client'), attrs.get('branch'))
         return attrs

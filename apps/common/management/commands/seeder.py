@@ -274,7 +274,7 @@ class Command(BaseCommand):
             )
 
         # Seed LoanStatuses with specific rules for auto calculations
-        loan_status_names = ['Pending','Approved','Active','Default', 'Overdue', 'Legal', 'Bad Debt', 'Closed','Cancelled','Failed']
+        loan_status_names = ['Pending','Approved','Rejected','Active','Default','Completed','Overdue','Cancelled','Failed', 'Closed', 'Legal', 'Bad Debt']
         for name in loan_status_names:
             allow_auto_calculations = True if name in ['Active', 'Default'] else False
             LoanStatus.objects.get_or_create(
