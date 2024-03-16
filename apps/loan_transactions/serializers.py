@@ -8,14 +8,16 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 class LoanTransactionSerializer(serializers.ModelSerializer):
+    client_name = serializers.CharField(source='loan.client.get_full_name', read_only=True)
     currency = serializers.CharField(source='currency.code')
+    
     branch = serializers.CharField(source='branch.name', read_only=True)
     payment_gateway = serializers.CharField(source='payment_gateway.name', required=False)
     created_by = serializers.CharField(source='user.full_name', read_only=True)
 
     class Meta:
         model = LoanTransaction
-        fields = ['id', 'loan', 'description', 'transaction_type', 'debit', 'credit', 'currency', 'created_by', 'branch', 'payment_gateway', 'status']
+        fields = ['id', 'loan', 'client_name','description', 'transaction_type', 'debit', 'credit', 'currency', 'created_by', 'branch', 'payment_gateway', 'status']
         read_only_fields = ['id', 'status','branch','loan']
         
     def validate(self, data):

@@ -3,6 +3,13 @@ from rest_framework.response import Response
 from .models import LoanTransaction
 from .serializers import LoanTransactionSerializer
 from apps.loans.models import Loan
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
+
+class AllTransactions(generics.ListAPIView):
+    queryset = LoanTransaction.objects.all()
+    serializer_class = LoanTransactionSerializer
+    permission_classes = [IsAuthenticated, IsAdminUser]
+    
 
 class AddChargeView(generics.CreateAPIView):
     serializer_class = LoanTransactionSerializer
@@ -55,3 +62,4 @@ class TopUpView(generics.CreateAPIView):
         request.data['created_by'] = request.user
         request.data['branch'] = request.user.active_branch
         return self.create(request, *args, **kwargs)
+    

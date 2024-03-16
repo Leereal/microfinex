@@ -1,8 +1,14 @@
 from django.contrib import admin
+from apps.documents.models import Document
 
 from apps.loan_statuses.models import LoanStatus
 from .models import Loan
 from django.utils.html import format_html
+
+class DocumentInline(admin.StackedInline):  # or use TabularInline for a more compact layout
+    model = Document
+    extra = 1  # How many empty rows to show
+    fields = ['name', 'file', 'document_type','expiration_date']  # Adjust fields as needed
 
 
 class LoanAdmin(admin.ModelAdmin):
@@ -24,6 +30,7 @@ class LoanAdmin(admin.ModelAdmin):
         'total_payments', 'total_charges', 'total_bonuses', 'balance',
         'created_at', 'last_modified'
     )
+    inlines = [DocumentInline]
 
     @admin.display(description='Total Payments')
     def total_payments_display(self, obj):

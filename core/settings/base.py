@@ -35,7 +35,9 @@ THIRD_PARTY_APPS = [
     "allauth.socialaccount",
     "dj_rest_auth",
     "dj_rest_auth.registration",
-    'django_filters',
+    # "django_elasticsearch_dsl",
+    # "django_elasticsearch_dsl_drf",
+    # "storages",
     ]
 
 LOCAL_APPS = [
@@ -62,12 +64,14 @@ LOCAL_APPS = [
     "apps.loan_applications",
     "apps.global_settings",
     "apps.branch_settings",
-    # "apps.documents",
+    "apps.documents",
+    "apps.document_types",
     # "apps.smses",
     # "apps.emails",
     # "apps.notifications",
     "apps.loans",
-    "apps.loan_transactions"
+    "apps.loan_transactions",
+    # "apps.search"
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 MIDDLEWARE = [
@@ -153,6 +157,28 @@ STATICFILES_DIR = []
 MEDIA_URL = "/mediafiles/"
 MEDIA_ROOT = str(ROOT_DIR/ "mediafiles")
 
+AWS_QUERYSTRING_AUTH = False
+AWS_ACCESS_KEY_ID=env("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY=env("AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME=env("AWS_STORAGE_BUCKET_NAME")
+AWS_S3_FILE_OVERWRITE = False
+AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
+
+# DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage" # This is for Django <4.2
+# STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+
+STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.s3.S3Storage", # This is for Django >=4.2 
+    },
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+    }
+}
+
+
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
@@ -218,6 +244,12 @@ ACCOUNT_CONFIRM_EMAIL_ON_GET = True
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
 ACCOUNT_PASSWORD_INPUT_RENDER_VALUE = False
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
+
+ELASTICSEARCH_DSL ={
+    "default":{
+        'hosts':"es:9200", # From dockerfile container
+    }
+}
 
 LOGGING = {
     "version": 1,

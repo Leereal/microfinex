@@ -69,3 +69,6 @@ seeder:
 
 cron:
 	docker compose -f local.yml run --rm api python manage.py cron
+
+search-index:
+	docker compose -f local.yml run exec api python manage.py search_index --create

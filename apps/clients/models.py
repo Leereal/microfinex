@@ -59,7 +59,7 @@ class Client(AuditableMixin,TimeStampedModel):
     city = models.CharField(_('City'), max_length=255, blank=True, null=True)
     state = models.CharField(_('State / Province'), max_length=255, blank=True, null=True)
     country = models.CharField(verbose_name=_("country"),max_length=200, blank=True,  null=True, choices=CountryField().choices + [('', 'Select Country')])
-    guarantor = models.CharField(_('Guarantor'), max_length=255, blank=True, null=True)
+    guarantor = models.CharField('self', max_length=255, blank=True, null=True)
     is_guarantor = models.BooleanField(_('Is Guarantor'), default=False)
     status = models.CharField(_('Status'), max_length=20, choices=Status.choices, default=Status.ACTIVE)
     created_by = models.ForeignKey(User, verbose_name=_('Created By'), on_delete=models.SET_NULL, blank=True, null=True)

@@ -1,4 +1,6 @@
 from rest_framework import serializers
+from apps.documents.models import Document
+from apps.documents.serializers import DocumentSerializer
 from apps.loan_transactions.serializers import LoanTransactionSerializer
 from apps.loans.models import Loan
 from apps.loans.validation import validate_client, validate_loan_amount
@@ -11,6 +13,10 @@ class LoanSerializer(serializers.ModelSerializer):
     loan_approved_by = serializers.CharField(source="approved_by.get_full_name", read_only=True)
     transactions = LoanTransactionSerializer(many=True, source="loan_transactions", read_only=True) 
     product_name = serializers.SerializerMethodField()
+    documents = DocumentSerializer(many=True, read_only=True)
+    upload_files = serializers.ListField(
+        child=serializers.DictField(), write_only=True, required=False
+    )
 
     class Meta:
         model = Loan
@@ -19,10 +25,27 @@ class LoanSerializer(serializers.ModelSerializer):
             "created_by", "loan_created_by", "approved_by", "loan_approved_by",
             "amount", "interest_rate", "interest_amount", "currency",
             "loan_application", "disbursement_date", "start_date", "expected_repayment_date",  # Updated
-            "status",'product_name', "branch_product", "group_product","transactions"
+            "status",'product_name', "branch_product", "group_product","transactions", "documents", "upload_files"
         ]
         read_only_fields = ["branch_name", "loan_created_by", "loan_approved_by", "created_by", "branch","transactions"]
 
+    def create(self, validated_data):
+        print("validated_data:",validated_data)
+        upload_files = validated_data.pop('upload_files')
+        loan = Loan.objects.create(**validated_data)
+        
+        for file in upload_files:
+            Document.objects.create(
+                loan=loan, 
+                file=file['file'], 
+                uploaded_by=self.context['request'].user, 
+                branch=loan.branch, 
+                document_type=file.get('document_type'),
+                name=file.get('name'),
+                expiration_date=file.get('expiration_date')
+                )
+        return loan
+    
     def get_product_name(self,obj):
         if obj.group_product:
             return obj.group_product.product.name

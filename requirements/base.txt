@@ -20,3 +20,7 @@ django-allauth
 djangorestframework-simplejwt
 dj-rest-auth
 django-filter
+django-elasticsearch-dsl==7.3.0
+django-elasticsearch-dsl-drf==0.22.5
+django-storages[s3]
+boto3
