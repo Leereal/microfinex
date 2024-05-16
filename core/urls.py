@@ -5,6 +5,7 @@ from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 from rest_framework import permissions
 from dj_rest_auth.views import  PasswordResetConfirmView
+from apps.dashboard.views import DashboardSummaryView
 from apps.users.views import CustomLoginView, CustomUserDetailsView, CustomUserEditView
 
 schema_view = get_schema_view(
@@ -51,6 +52,7 @@ urlpatterns = [
     path("api/v1/loans/",include("apps.loans.urls")),
     path("api/v1/loan-transactions/",include("apps.loan_transactions.urls")),
     # path("api/v1/elastic/",include("apps.search.urls")),
+    path("api/v1/dashboard/", DashboardSummaryView.as_view(), name="dashboard"),
 ]
 
 admin.site.site_header = "Microfinex Pro Admin"
