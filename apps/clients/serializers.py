@@ -69,6 +69,7 @@ class ClientSerializer(serializers.ModelSerializer):
     next_of_kin = NextOfKinSerializer()
     employer = EmployerSerializer()
     client_limit = ClientLimitSerializer()
+    full_name = serializers.CharField(source='get_full_name', read_only=True)
     
     class Meta:
         model = Client
