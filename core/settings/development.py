@@ -8,11 +8,11 @@ DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = ["http://localhost:8080","http://172.25.241.154:8080"]
 
-# DB_USERNAME = env("POSTGRES_USER")
-# DB_PASSWORD = env("POSTGRES_PASSWORD")
-# DB_DATABASE = env("POSTGRES_DB")
-# DB_HOST = env("POSTGRES_HOST")
-# DB_PORT = env("POSTGRES_PORT")
+DB_USERNAME = env("POSTGRES_USER")
+DB_PASSWORD = env("POSTGRES_PASSWORD")
+DB_DATABASE = env("POSTGRES_DB")
+DB_HOST = env("POSTGRES_HOST")
+DB_PORT = env("POSTGRES_PORT")
 
 # DB_USERNAME = POSTGRES_USER="leereal"
 # DB_PASSWORD = POSTGRES_PASSWORD="mutabvuri$8"
@@ -20,27 +20,25 @@ CSRF_TRUSTED_ORIGINS = ["http://localhost:8080","http://172.25.241.154:8080"]
 # DB_HOST = POSTGRES_HOST="localhost"
 # DB_PORT = POSTGRES_PORT=5432
 
-# DB_IS_AVAIL = all([
-#     DB_USERNAME,
-#     DB_PASSWORD,
-#     DB_DATABASE,
-#     DB_HOST,
-#     DB_PORT
-# ])
+DB_IS_AVAIL = all([
+    DB_USERNAME,
+    DB_PASSWORD,
+    DB_DATABASE,
+    DB_HOST,
+    DB_PORT
+])
 
-
-
-# if DB_IS_AVAIL:
-#     DATABASES = {
-#         'default': {
-#             "ENGINE": 'django.db.backends.postgresql',
-#             "NAME": DB_DATABASE,
-#             "USER": DB_USERNAME,
-#             "PASSWORD": DB_PASSWORD,
-#             "HOST":DB_HOST,
-#             "PORT": DB_PORT
-#         }
-#     }
+if DB_IS_AVAIL:
+    DATABASES = {
+        'default': {
+            "ENGINE": 'django.db.backends.postgresql',
+            "NAME": DB_DATABASE,
+            "USER": DB_USERNAME,
+            "PASSWORD": DB_PASSWORD,
+            "HOST":DB_HOST,
+            "PORT": DB_PORT
+        }
+    }
 
 
 # DATABASES = {

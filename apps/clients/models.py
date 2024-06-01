@@ -7,6 +7,7 @@ from apps.audits.auditing import AuditableMixin
 from django.contrib.postgres.fields import ArrayField
 from phonenumber_field.modelfields import PhoneNumberField
 from django_countries.fields import CountryField
+from django_countries import countries
 
 from apps.common.models import TimeStampedModel
 from apps.branches.models import Branch
@@ -48,7 +49,7 @@ class Client(AuditableMixin,TimeStampedModel):
     national_id = models.CharField(_('National ID'), max_length=255,unique=True, blank=True, null=True)
     nationality = models.CharField(_('Nationality'), max_length=255, blank=True, null=True)
     passport_number = models.CharField(_('Passport Number'), max_length=255, unique=True, blank=True, null=True)
-    passport_country = models.CharField(verbose_name=_("passport country"),max_length=200,blank=True,  null=True, choices=CountryField().choices + [('', 'Select Country')])
+    passport_country = models.CharField(verbose_name=_("passport country"), max_length=200, blank=True, null=True, choices=countries)
     photo = models.CharField(_('Photo'), max_length=255, blank=True, null=True)
     date_of_birth = models.DateField(_('Date of Birth'))
     title = models.CharField(_('Title'), max_length=10, choices=Title.choices , blank=True, null=True)
@@ -58,7 +59,7 @@ class Client(AuditableMixin,TimeStampedModel):
     zip_code = models.CharField(_('ZIP Code'), max_length=20, blank=True, null=True)
     city = models.CharField(_('City'), max_length=255, blank=True, null=True)
     state = models.CharField(_('State / Province'), max_length=255, blank=True, null=True)
-    country = models.CharField(verbose_name=_("country"),max_length=200, blank=True,  null=True, choices=CountryField().choices + [('', 'Select Country')])
+    country = models.CharField(_("Country"), max_length=200, null=True, choices=countries)
     guarantor = models.CharField('self', max_length=255, blank=True, null=True)
     is_guarantor = models.BooleanField(_('Is Guarantor'), default=False)
     status = models.CharField(_('Status'), max_length=20, choices=Status.choices, default=Status.ACTIVE)

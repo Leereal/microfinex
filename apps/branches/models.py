@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django_countries.fields import CountryField
+from django_countries import countries
 from phonenumber_field.modelfields import PhoneNumberField
 from apps.audits.auditing import AuditableMixin
 from apps.common.models import TimeStampedModel
@@ -14,7 +15,7 @@ class Branch(AuditableMixin, TimeStampedModel):  # Inherit from AuditableMixin
         verbose_name=_("phone number"), max_length=30, default=None, blank=True
     )
     is_active = models.BooleanField(verbose_name=_("is active"),default=True)
-    country = models.CharField(verbose_name=_("country"),max_length=200,  null=True, choices=CountryField().choices + [('', 'Select Country')])
+    country = models.CharField(verbose_name=_("country"), max_length=200, null=True, choices=countries)
 
 
     class Meta:
