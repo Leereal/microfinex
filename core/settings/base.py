@@ -77,6 +77,7 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     'corsheaders.middleware.CorsMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",# PRODUCTION ONLY
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -157,24 +158,24 @@ STATICFILES_DIR = []
 MEDIA_URL = "/mediafiles/"
 MEDIA_ROOT = str(ROOT_DIR/ "mediafiles")
 
-AWS_QUERYSTRING_AUTH = False
-AWS_ACCESS_KEY_ID=env("AWS_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY=env("AWS_SECRET_ACCESS_KEY")
-AWS_STORAGE_BUCKET_NAME=env("AWS_STORAGE_BUCKET_NAME")
-AWS_S3_FILE_OVERWRITE = False
-AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
+# AWS_QUERYSTRING_AUTH = False
+# AWS_ACCESS_KEY_ID=env("AWS_ACCESS_KEY_ID")
+# AWS_SECRET_ACCESS_KEY=env("AWS_SECRET_ACCESS_KEY")
+# AWS_STORAGE_BUCKET_NAME=env("AWS_STORAGE_BUCKET_NAME")
+# AWS_S3_FILE_OVERWRITE = False
+# AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
 
 # DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage" # This is for Django <4.2
 # STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
-STORAGES = {
-    "default": {
-        "BACKEND": "storages.backends.s3.S3Storage", # This is for Django >=4.2 
-    },
-    "staticfiles": {
-        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
-    }
-}
+# STORAGES = {
+#     "default": {
+#         "BACKEND": "storages.backends.s3.S3Storage", # This is for Django >=4.2 
+#     },
+#     "staticfiles": {
+#         "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+#     }
+# }
 
 
 

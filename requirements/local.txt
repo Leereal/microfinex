@@ -8,3 +8,4 @@ isort
 watchfiles
 pytest-factoryboy
 Faker
+requests
