@@ -32,6 +32,19 @@ services:
     networks:
       - microfinex-api
 
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    restart: on-failure
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - microfinex-api
+
   # postgres:
   #   build:
   #     context: .
