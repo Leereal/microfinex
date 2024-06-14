@@ -28,18 +28,18 @@ services:
     networks:
       - reverseproxy_nw
 
-  frontend:
-    build:
-      context: ./frontend
-      dockerfile: ../docker/production/django/Dockerfile
-    restart: on-failure
-    ports:
-      - "3000:3000"
-    volumes:
-      - ./frontend:/app
-      - /app/node_modules
-    networks:
-      - reverseproxy_nw
+  # frontend:
+  #   build:
+  #     context: ./frontend
+  #     dockerfile: ../docker/production/django/Dockerfile
+  #   restart: on-failure
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - ./frontend:/app
+  #     - /app/node_modules
+  #   networks:
+  #     - reverseproxy_nw
 
   # postgres: //we only use this if we are hosting our own db
   #   build:

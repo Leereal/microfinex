@@ -2,9 +2,6 @@ ARG PYTHON_VERSION=3.11.2-bullseye
 
 FROM python:${PYTHON_VERSION} as python
 
-# Define the Node.js base image
-ARG NODE_VERSION=20-alpine
-FROM node:${NODE_VERSION} as node-base
 
 FROM python as python-build-stage
 ARG BUILD_ENVIRONMENT=production
@@ -64,28 +61,6 @@ RUN chmod +x /start-celeryworker
 COPY ./docker/production/django/celery/flower/start /start-flower
 RUN sed -i 's/\r$//g' /start-flower
 RUN chmod +x /start-flower
-
-# Define the build stage for Node.js (frontend)
-FROM node-base as frontend-build-stage
-ARG APP_HOME=/app
-
-WORKDIR ${APP_HOME}/frontend
-
-# Copy only the package.json and package-lock.json to install dependencies
-COPY ./frontend/package*.json ./
-
-RUN npm install
-
-# Copy the rest of the frontend code
-COPY ./frontend ./
-
-# Build the frontend
-CMD ["npm", "run", "dev"]
-
-# Copy frontend build into Python run stage
-FROM python-run-stage
-
-COPY --from=frontend-build-stage ${APP_HOME}/frontend ${APP_HOME}/frontend
 
 COPY --chown=django:django . ${APP_HOME}
 
