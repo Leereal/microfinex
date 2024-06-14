@@ -3,7 +3,7 @@ ARG PYTHON_VERSION=3.11.2-bullseye
 FROM python:${PYTHON_VERSION} as python
 
 # Define the Node.js base image
-ARG NODE_VERSION=20-alpine3.20
+ARG NODE_VERSION=20-alpine
 FROM node:${NODE_VERSION} as node-base
 
 FROM python as python-build-stage
