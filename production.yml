@@ -31,7 +31,7 @@ services:
   frontend:
     build:
       context: ./frontend
-      dockerfile: ./docker/production/django/Dockerfile
+      dockerfile: ../docker/production/django/Dockerfile
     restart: on-failure
     ports:
       - "3000:3000"
