@@ -7,8 +7,7 @@ from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-# TODO: change this in production
-from core.settings.development import DEFAULT_FROM_EMAIL
+from core.settings.production import DEFAULT_FROM_EMAIL #PRODUCTION ONLY
 
 from .models import Profile
 from .pagination import ProfilePagination

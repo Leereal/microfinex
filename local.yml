@@ -24,7 +24,7 @@ services:
       - ./.envs/.local/.django
       - ./.envs/.local/.postgres
     depends_on:
-      - postgres
+      # - postgres
       - mailhog
       - redis
       # - es
@@ -32,17 +32,30 @@ services:
     networks:
       - microfinex-api
 
-  postgres:
+  frontend:
     build:
-      context: .
-      dockerfile: ./docker/local/postgres/Dockerfile
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    restart: on-failure
+    ports:
+      - "3000:3000"
     volumes:
-      - local_postgres_data:/var/lib/postgresql/data
-      - local_postgres_data_backups:/backups
-    env_file:
-      - ./.envs/.local/.postgres
+      - ./frontend:/app
+      - /app/node_modules
     networks:
       - microfinex-api
+
+  # postgres:
+  #   build:
+  #     context: .
+  #     dockerfile: ./docker/local/postgres/Dockerfile
+  #   volumes:
+  #     - local_postgres_data:/var/lib/postgresql/data
+  #     - local_postgres_data_backups:/backups
+  #   env_file:
+  #     - ./.envs/.local/.postgres
+  #   networks:
+  #     - microfinex-api
 
   mailhog:
     image: mailhog/mailhog:v1.0.0
@@ -69,7 +82,7 @@ services:
       - ./.envs/.local/.postgres
     depends_on:
       - redis
-      - postgres
+      # - postgres
       - mailhog
     networks:
       - microfinex-api
@@ -88,7 +101,7 @@ services:
       - "5555:5555"
     depends_on:
       - redis
-      - postgres
+      # - postgres
     networks:
       - microfinex-api
 

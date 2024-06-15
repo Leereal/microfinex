@@ -36,7 +36,10 @@ if DB_IS_AVAIL:
             "USER": DB_USERNAME,
             "PASSWORD": DB_PASSWORD,
             "HOST":DB_HOST,
-            "PORT": DB_PORT
+            "PORT": DB_PORT,
+            'OPTIONS': {
+      'sslmode': 'require',
+    },
         }
     }
 
